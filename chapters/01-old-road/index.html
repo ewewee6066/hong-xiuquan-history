@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="blood-ink-gold"
+      data-themes="blood-ink-gold,gruvbox-dark,magazine-bold"
+      data-theme-base="assets/themes/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>洪秀全 · 旧路断裂之后 — 3D 动态演示</title>
+<meta name="theme-color" content="#09090b">
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" id="theme-link" href="theme.css">
+<link rel="stylesheet" href="assets/animations/animations.css">
+<link rel="stylesheet" href="deck3d.css">
+<link rel="stylesheet" href="stage1.css">
+<link rel="stylesheet" href="../../assets/series.css">
+<script>
+  /* ?static=1 或 ?still=1 → 静态捕获模式：入场动画停在终态，便于截图自检 */
+  if (/(^|[?&])(static|still)=1/.test(location.search)) {
+    document.documentElement.classList.add('capture');
+  }
+</script>
+</head>
+<body>
+<nav class="series-nav" aria-label="专题章节导航">
+  <a class="series-home" href="../../">专题目录</a>
+  <span class="series-position">01 / 04</span>
+  <a href="../02-faith/">下一章</a>
+</nav>
+<div class="deck">
+  <div class="d3-spot"></div>
+  <div class="deck-header">
+    <span>洪秀全人物史 · 第一章</span>
+    <span>时代洪流中的一生</span>
+  </div>
+  <div class="deck-footer">
+    <span>科举挫败 · 丁酉异梦 · 宗教转向</span>
+    <span class="slide-number" data-current="1" data-total="14"></span>
+  </div>
+
+  <!-- ============================================ 01 · 封面 -->
+  <section class="slide s1-cover" data-title="封面">
+    <div class="d3-scene" data-scene data-tilt="3">
+      <div class="d3-layer bleed" style="--z:-470px">
+        <img class="d3-bg" src="img/bg_cover.jpg" alt="洪秀全塑像与纪念馆">
+      </div>
+      <div class="d3-layer bleed" style="--z:-400px;--d:60">
+        <div style="position:absolute;inset:0;background:linear-gradient(94deg,rgba(6,6,9,.95) 0%,rgba(6,6,9,.8) 34%,rgba(6,6,9,.42) 66%,rgba(6,6,9,.66) 100%)"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-300px;--d:100"><div class="d3-cloud"></div></div>
+      <div class="d3-layer bleed" style="--z:-210px;--d:140"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-150px;--d:180"></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-70px;--d:220" data-dust="50"></div>
+      <div class="d3-layer bleed d3-vig" style="--z:-50px;--d:220"></div>
+      <div class="d3-layer pad" style="--z:80px;--d:260">
+        <div class="cover-stack">
+          <div class="d3-kicker d3-rise" style="--d:280">中国近代史 · 第一阶段 1827—1843</div>
+          <h1 class="d3-h1 d3-extrude d3-rise" style="--d:380">旧路断裂之后</h1>
+          <div class="cover-rule d3-rise" style="--d:520"></div>
+          <p class="cover-sub d3-rise" style="--d:580">科举挫败、丁酉异梦与宗教转向</p>
+          <p class="d3-lede d3-rise" style="--d:680">他最初并不是宗教领袖，而是把人生希望押在科举上的乡村读书人。四次落榜、一场大病、一本被忽略六年的布道书——当旧路走不通，他用自己的梦重新解释了失败，也重新解释了世界。</p>
+          <div class="d3-chips d3-rise" style="--d:820">
+            <span class="d3-chip gold">1827 · 县试成绩不错</span>
+            <span class="d3-chip">1836 · 广州得《劝世良言》</span>
+            <span class="d3-chip red">1843 · 转向拜上帝</span>
+          </div>
+        </div>
+      </div>
+      <div class="d3-layer d3-slot-br" style="--z:250px;--d:1000">
+        <div class="d3-seal" aria-hidden="true"><span>旧</span><span>路</span><span>断</span><span>裂</span></div>
+      </div>
+    </div>
+    <div class="notes">
+      开场先把问题抛出来：洪秀全最初并不是宗教领袖，而是一个把人生希望押在科举上的乡村读书人。
+      接下来用四个年份串起这一阶段：1827 年县试成绩不错；1836 年在广州得到《劝世良言》，当时并未在意；1837 年第三次落榜后大病一场，出现“丁酉异梦”；1843 年第四次落榜，他重读那本书，转向拜上帝。
+      一句话可以概括这一阶段：**外部道路失败，内部意义重构。**
+    </div>
+  </section>
+
+  <!-- ============================================ 02 · 四个年份 -->
+  <section class="slide s2-years" data-title="四个年份">
+    <div class="d3-scene" data-scene data-tilt="2.4">
+      <div class="d3-layer bleed" style="--z:-620px">
+        <img class="d3-bg" src="img/engraving.jpg" alt="太平天国时期版画" style="opacity:.42">
+        <div class="d3-scrim-full" style="position:absolute;inset:0"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-380px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-140px;--d:160"></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-80px;--d:200" data-dust="34"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:220">
+        <div class="d3-rise" style="--d:260;max-width:calc(100% - 380px)">
+          <div class="d3-kicker">时间轴 · 一次身份改写</div>
+          <h2 class="d3-h2" style="margin:18px 0 12px">四个年份，完成一次身份改写</h2>
+          <p class="d3-lede" style="max-width:78ch">从相信科举，到被科举拒绝，再到用宗教解释自己的失败——这条线索由四个年份钉住。</p>
+        </div>
+        <p class="d3-quote d3-rise" style="--d:560;margin-top:26px;font-size:34px">外部道路失败，内部意义重构。</p>
+        <div class="d3-march d3-rise" style="--d:420">
+          <div class="d3-mcard" style="--i:0">
+            <div class="y">1827</div><div class="t">县试成绩不错</div><div class="d">传统道路仍有希望</div>
+          </div>
+          <div class="d3-mcard" style="--i:1">
+            <div class="y">1836</div><div class="t">广州得《劝世良言》</div><div class="d">当时只随手翻阅</div>
+          </div>
+          <div class="d3-mcard" style="--i:2">
+            <div class="y">1837</div><div class="t">第三次落榜后大病</div><div class="d">异梦留下解释的种子</div>
+          </div>
+          <div class="d3-mcard hot" style="--i:3">
+            <div class="y">1843</div><div class="t">第四次落榜后重读</div><div class="d">从孔孟信徒转向拜上帝</div>
+          </div>
+        </div>
+      </div>
+      <div class="d3-layer" style="--z:220px;--d:900">
+        <div class="s2-inset d3-pop">
+          <div class="d3-plane contain fit">
+            <img src="img/portrait.png" alt="洪秀全青年时期画像（后世据史料想象绘制）">
+            <span class="d3-tag">青年洪秀全 · 后世据史料想象绘制</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      四个年份把整条线索钉住。1827 年县试成绩不错，他还相信科举可以改变命运；1836 年拿到《劝世良言》时并未重视；1837 年落榜后大病、异梦，先留下一个模糊的自我解释；1843 年最后一次落榜，他重读那本书，把六年前的梦整理成宗教使命。
+      **外部道路失败，内部意义重构**——这是本阶段的主轴。
+    </div>
+  </section>
+
+  <!-- ============================================ 03 · 章节一 -->
+  <section class="slide s3-chapter" data-title="章节一 科举之路">
+    <div class="d3-scene" data-scene data-tilt="3.2">
+      <div class="d3-layer bleed" style="--z:-560px">
+        <img class="d3-bg" src="img/bg_war.jpg" alt="近代战场气氛底图" style="opacity:.5">
+        <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,6,9,.95),rgba(6,6,9,.6) 58%,rgba(6,6,9,.86))"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-360px;--d:60"><div class="d3-cloud"></div></div>
+      <div class="d3-layer bleed" style="--z:-240px;--d:120"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-150px;--d:170"></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-70px;--d:210" data-dust="38"></div>
+      <div class="d3-layer pad" style="--z:80px;--d:250">
+        <div class="ch-head">
+          <div class="ch-badge d3-pop" style="--d:280">壹</div>
+          <div class="d3-rise" style="--d:360">
+            <div class="d3-kicker">第一部分 · 1827—1843</div>
+            <h2 class="d3-h2" style="margin:18px 0 10px">科举之路：屡试不第</h2>
+            <p class="d3-lede">寒窗苦读的起点，也是后来转向的起点。</p>
+          </div>
+        </div>
+        <div class="d3-g2" style="margin-top:44px;gap:56px;align-items:center">
+          <div class="d3-pop" style="--d:520">
+            <div class="d3-plane" style="transform:rotateY(9deg)">
+              <img src="img/house.png" alt="洪秀全故居">
+              <span class="d3-tag">洪秀全故居 · 广东花县官禄㘵村</span>
+            </div>
+          </div>
+          <div class="d3-rise" style="--d:620">
+            <p class="d3-body">这处农家院落是洪秀全出生、读书的地方，也是他第一次赴考之前“寒窗”岁月的全部世界。他一边做塾师、一边备考，把改变命运的希望全押在科举上。</p>
+            <p class="d3-note" style="margin-top:22px">故居至今仍保存。它是起点，也是后来所有选择的参照物——正是一次次失败，才有了后来的转向。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      进入第一部分：科举之路。
+      这处农家院落是洪秀全出生、读书的地方，也是他第一次赴考之前“寒窗”岁月的全部世界。他一边做塾师、一边备考，把改变命运的希望全押在科举上。
+      要提醒的是：他的起点与当时千千万万农家子弟并无不同。正是这条路上反复的失败，才有了后来的转向。
+    </div>
+  </section>
+
+  <!-- ============================================ 04 · 一道跨不过去的门槛 -->
+  <section class="slide s4-gate" data-title="府试的门槛">
+    <div class="d3-scene" data-scene data-tilt="2.6">
+      <div class="d3-layer bleed" style="--z:-640px">
+        <img class="d3-bg" src="img/certificate.jpg" alt="清代文书" style="opacity:.34">
+        <div class="d3-scrim-full" style="position:absolute;inset:0"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-360px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-140px;--d:160"></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-80px;--d:200" data-dust="30"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:220">
+        <div class="d3-rise" style="--d:260">
+          <div class="d3-kicker">一、科举之路</div>
+          <h2 class="d3-h2" style="margin:18px 0 8px">一道始终跨不过去的门槛</h2>
+          <p class="d3-lede" style="max-width:76ch">县试顺遂之后，府试成为他十几年都未能越过的关口。</p>
+        </div>
+        <div class="d3-ladder d3-rise" style="--d:420">
+          <div class="d3-step" style="--i:0">
+            <div class="bar"></div>
+            <span class="yr">14 岁</span>
+            <div class="d3-card" style="margin-top:12px">
+              <p class="d3-body" style="font-size:17px">1827 年参加县试，成绩不错</p>
+            </div>
+          </div>
+          <div class="d3-step" style="--i:1">
+            <div class="bar"></div>
+            <span class="yr">十余年</span>
+            <div class="d3-card" style="margin-top:12px">
+              <p class="d3-body" style="font-size:17px">一边做塾师，一边备考</p>
+            </div>
+          </div>
+          <div class="d3-step" style="--i:2">
+            <div class="bar"></div>
+            <span class="yr">至少四次</span>
+            <div class="d3-card" style="margin-top:12px">
+              <p class="d3-body" style="font-size:17px">赴广州应府试，全部名落孙山</p>
+            </div>
+          </div>
+          <div class="d3-step hot" style="--i:3">
+            <div class="bar"></div>
+            <span class="yr">31 岁</span>
+            <div class="d3-card" style="margin-top:12px">
+              <p class="d3-body" style="font-size:17px">1843 年最后一次应试，仍然失败</p>
+            </div>
+          </div>
+        </div>
+        <p class="d3-quote d3-rise" style="--d:820;margin-top:26px;font-size:32px">1843 年的失败，不再只是一次落榜，而是科举梦的终结。</p>
+      </div>
+    </div>
+    <div class="notes">
+      14 岁时，洪秀全参加县试，成绩不错；但紧接着的府试（考秀才的正式关卡）落榜，此后府试成了他难以跨越的障碍。
+      十几年间，他一边做塾师一边备考，至少四次赴广州应试，结果全部名落孙山。1843 年，31 岁的他抱着最后希望再次赴考，依然失败。
+      **这次失败，不再只是一次落榜，而是他科举梦的终结。**
+    </div>
+  </section>
+
+  <!-- ============================================ 05 · 手迹 -->
+  <section class="slide s5-exam" data-title="科场训练的手迹">
+    <div class="d3-scene" data-scene data-tilt="2.2">
+      <div class="d3-layer bleed" style="--z:-620px">
+        <img class="d3-bg" src="img/writings.jpg" alt="刻本与文稿气氛底图" style="opacity:.34">
+        <div class="d3-scrim-full" style="position:absolute;inset:0"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-340px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-140px;--d:150"></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-80px;--d:190" data-dust="30"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:220">
+        <div class="d3-rise" style="--d:260">
+          <div class="d3-kicker">一、科举之路 · 史料一</div>
+          <h2 class="d3-h2" style="margin:18px 0 8px">科场训练留下的手迹</h2>
+        </div>
+        <div class="d3-g2" style="margin-top:30px;gap:52px;align-items:center">
+          <div class="d3-pop" style="--d:420">
+            <div class="d3-plane" style="transform:rotateY(-9deg)">
+              <img src="img/exam.png" alt="洪秀全手书科考范文残页">
+              <span class="d3-tag">手书文章残页 · 抄录苏轼《刑赏忠厚之至论》</span>
+            </div>
+          </div>
+          <div>
+            <p class="d3-quote d3-rise" style="--d:520">“赏疑从与，所以广恩也；罚疑从去，所以谨刑也。”<span class="src">苏轼《刑赏忠厚之至论》，见洪秀全手书残页</span></p>
+            <p class="d3-body d3-rise" style="--d:620;margin-top:26px">这不是一个“反儒”者的起点。它证明他曾认真接受儒家治道与科场作文训练。</p>
+            <p class="d3-note d3-rise" style="--d:700;margin-top:18px">投入越深，失败的冲击越重。日后才会出现与孔孟之书决裂的姿态。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      这份手迹抄录的是苏轼《刑赏忠厚之至论》中“赏疑从与，所以广恩也；罚疑从去，所以谨刑也”一段，是他熟读经史、按科场标准作文的直接痕迹。
+      他早年认同的正是这种“忠厚”的儒家治道。也正因投入太深，屡试不第的打击才格外沉重，日后才会愤而弃孔孟之书。
+    </div>
+  </section>
+
+  <!-- ============================================ 06 · 互证 -->
+  <section class="slide s6-proof" data-title="屡试不售的互证">
+    <div class="d3-scene" data-scene data-tilt="2.2">
+      <div class="d3-layer bleed" style="--z:-620px">
+        <img class="d3-bg" src="img/certificate.jpg" alt="清代文书底图" style="opacity:.3">
+        <div class="d3-scrim-full" style="position:absolute;inset:0"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-340px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-140px;--d:150"></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-80px;--d:190" data-dust="30"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:220">
+        <div class="d3-rise" style="--d:260">
+          <div class="d3-kicker">一、科举之路 · 史料二</div>
+          <h2 class="d3-h2" style="margin:18px 0 8px">“屡试不售”并非后人的附会</h2>
+        </div>
+        <div class="d3-g2" style="margin-top:26px;gap:52px;align-items:center">
+          <div class="d3-pop" style="--d:420">
+            <div class="d3-plane" style="transform:rotateY(8deg)">
+              <img src="img/rengan.png" alt="洪仁玕自述手稿原件">
+              <span class="d3-tag">洪仁玕自述手稿原件 · 馆藏档案影印</span>
+            </div>
+          </div>
+          <div>
+            <p class="d3-quote d3-rise" style="--d:520">“自此时至三十一岁，每场榜名高列，惟道试不售，多有抱恨。”<span class="src">洪仁玕自述手稿</span></p>
+            <p class="d3-note d3-rise" style="--d:620;margin-top:22px">三类立场不同的材料，在这一点上互相印证。</p>
+          </div>
+        </div>
+        <div class="d3-g3 d3-rise" style="--d:700;margin-top:34px">
+          <div class="d3-card gold">
+            <h4>洪仁玕自述</h4>
+            <p>“惟道试不售，多有抱恨”</p>
+          </div>
+          <div class="d3-card">
+            <h4>张德坚《贼情汇纂》</h4>
+            <p>“屡试不售……心怀怨愤”</p>
+          </div>
+          <div class="d3-card">
+            <h4>李秀成自述</h4>
+            <p>“屡考文场，不得入学，久困场屋”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      这份手稿上写着：“自此时至三十一岁，每场榜名高列，惟道试不售，多有抱恨。”
+      同族好友洪仁玕的这份记录，与张德坚《贼情汇纂》“屡试不售……心怀怨愤”、李秀成自述“久困场屋”互相印证：**科场失败并非后人附会，而是他人生转向的真实起点。**
+      注意：三类材料的立场完全不同，却在这一点上一致，可信度比单一材料高。
+    </div>
+  </section>
+
+  <!-- ============================================ 07 · 章节二 -->
+  <section class="slide s7-chapter" data-title="章节二 大病与异梦">
+    <div class="d3-scene" data-scene data-tilt="3.4">
+      <div class="d3-layer bleed" style="--z:-600px">
+        <div class="d3-cloud"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-380px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-150px;--d:150"></div>
+      <div class="d3-layer bleed" style="--z:-90px;--d:200">
+        <div class="d3-shake"><div class="d3-crack"></div></div>
+      </div>
+      <div class="d3-layer bleed d3-dust" style="--z:-70px;--d:220" data-dust="52"></div>
+      <div class="d3-layer bleed d3-vig" style="--z:-50px;--d:220"></div>
+      <div class="d3-layer pad" style="--z:80px;--d:250">
+        <div class="ch-head">
+          <div class="ch-badge d3-pop" style="--d:280">贰</div>
+          <div class="d3-rise" style="--d:360">
+            <div class="d3-kicker">第二部分 · 1837</div>
+            <h2 class="d3-h2" style="margin:18px 0 10px">大病与“异梦”</h2>
+            <p class="d3-lede">第三次落榜之后，他在病中看见了一个后来被反复解释的梦。</p>
+          </div>
+        </div>
+        <div class="d3-g2" style="margin-top:40px;gap:64px;align-items:end">
+          <div class="d3-rise" style="--d:520">
+            <div class="d3-stat"><span class="v">1837</span><span class="l">丁酉年 · 第三次落榜</span></div>
+          </div>
+          <div class="d3-rise" style="--d:620">
+            <p class="d3-body">他卧床四十余天，高烧、神志不清，出现“斩妖”的幻觉和飞升见“天父”的梦境。</p>
+            <p class="d3-note" style="margin-top:18px">当时并未被重视。但六年后，这个梦获得了完整的解释。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      第二部分：1837 年的大病与“异梦”。
+      第三次落榜后，洪秀全深受刺激，回家后大病一场，卧床四十多天。材料描述他高烧、神志不清，出现“斩妖”幻觉和飞升见“天父”的梦境。
+      要强调一点：**异梦当时并没有立即变成成熟教义。**它更像一颗种子，要等到 1843 年重读《劝世良言》之后，才被整理成完整的神圣叙事。
+    </div>
+  </section>
+
+  <!-- ============================================ 08 · 四十余天 -->
+  <section class="slide s8-dream" data-title="四十余天">
+    <div class="d3-scene" data-scene data-tilt="2.6">
+      <div class="d3-layer bleed" style="--z:-640px">
+        <img class="d3-bg" src="img/engraving.jpg" alt="版画气氛底图" style="opacity:.32">
+        <div class="d3-scrim-full" style="position:absolute;inset:0"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-340px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-140px;--d:150"></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-80px;--d:190" data-dust="34"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:220">
+        <div class="d3-rise" style="--d:260">
+          <div class="d3-kicker">二、心理冲击</div>
+          <h2 class="d3-h2" style="margin:18px 0 8px">四十余天里，现实挫败变成神圣使命</h2>
+        </div>
+        <div class="d3-chain d3-rise" style="--d:420;margin-top:44px">
+          <div class="node"><div class="t">第三次落榜</div><div class="d">现实打击</div></div>
+          <div class="node"><div class="t">大病卧床</div><div class="d">四十余天</div></div>
+          <div class="node"><div class="t">高烧与幻觉</div><div class="d">斩妖、飞升</div></div>
+          <div class="node hot"><div class="t">见“天父”</div><div class="d">使命叙事的雏形</div></div>
+        </div>
+        <div class="d3-g2" style="margin-top:48px;gap:56px;align-items:center">
+          <p class="d3-quote d3-rise" style="--d:700">“世间之人皆我所生，却忘恩拜偶像，你可下去斩除妖魔。”<span class="src">韩山文《太平天国起义记》所记异梦</span></p>
+          <p class="d3-body d3-rise" style="--d:780">梦里的场景，正好为他的处境提供了一套解释：失败不是终点，而是被选中的人必经的考验。</p>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      把这一页看成一个心理链条：**落榜是现实打击，大病让日常秩序中断，高烧中的幻觉把压抑与愤懑转化为“斩妖、见天父”的场景，最后形成一个使命叙事的雏形。**
+      韩山文《太平天国起义记》里记下了这个梦：天使迎他升天，入一大殿，见一老者，金须黑袍，坐于高位，要他从天下去斩除妖魔。
+      但请记住：这套解释在 1837 年还没有成形，它要等到 1843 年才被拼装完整。
+    </div>
+  </section>
+
+  <!-- ============================================ 09 · 劝世良言 -->
+  <section class="slide s9-book" data-title="劝世良言">
+    <div class="d3-scene" data-scene data-tilt="2.4">
+      <div class="d3-layer bleed" style="--z:-620px">
+        <img class="d3-bg" src="img/writings.jpg" alt="刻本气息底图" style="opacity:.3">
+        <div class="d3-scrim-full" style="position:absolute;inset:0"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-340px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-140px;--d:150"></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-80px;--d:190" data-dust="30"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:220">
+        <div class="d3-rise" style="--d:260">
+          <div class="d3-kicker">二、心理冲击 · 史料三</div>
+          <h2 class="d3-h2" style="margin:18px 0 8px">一本被忽略的书，六年后成为答案</h2>
+        </div>
+        <div class="d3-g2" style="margin-top:28px;gap:60px;align-items:center">
+          <div class="d3-pop" style="--d:420">
+            <div class="d3-plane contain fit" style="height:432px;transform:rotateY(-8deg)">
+              <img src="img/liangfa.png" alt="梁发《劝世良言》书影">
+              <span class="d3-tag">《劝世良言》· 梁发著</span>
+            </div>
+          </div>
+          <div class="d3-col" style="gap:20px">
+            <div class="d3-card gold d3-rise" style="--d:520">
+              <span class="idx">1836</span>
+              <h4>广州应试时得到此书</h4>
+              <p>当时只是随手翻阅，并未在意。</p>
+            </div>
+            <div class="d3-card red d3-rise" style="--d:620">
+              <span class="idx">1843</span>
+              <h4>第四次落榜后重新翻读</h4>
+              <p>书中的“爷火华”上帝，与他梦中的老者被他视为“吻合”。</p>
+            </div>
+          </div>
+        </div>
+        <p class="d3-quote d3-rise" style="--d:760;margin-top:34px;font-size:32px">《劝世良言》由街头布道书，变成验证异梦的凭据。</p>
+      </div>
+    </div>
+    <div class="notes">
+      1836 年洪秀全在广州应试时得到梁发的《劝世良言》，当时只是随手翻阅，并未在意。
+      1843 年最后一次落榜后，他重读此书，发现书中的“爷火华”上帝竟与梦中的老者“吻合”。
+      研究指出，《劝世良言》因此成为他验证异梦真伪的重要凭据，也是他释梦的主要理论根据之一。**一本街头布道书，从此变成了他的答案。**
+    </div>
+  </section>
+
+  <!-- ============================================ 10 · 章节三 -->
+  <section class="slide s10-chapter" data-title="章节三 宗教转向">
+    <div class="d3-scene" data-scene data-tilt="3.2">
+      <div class="d3-layer bleed" style="--z:-580px">
+        <div class="d3-cloud alt"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-360px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-150px;--d:150"></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-70px;--d:210" data-dust="46"></div>
+      <div class="d3-layer bleed d3-vig" style="--z:-50px;--d:220"></div>
+      <div class="d3-layer pad" style="--z:80px;--d:250">
+        <div class="ch-head">
+          <div class="ch-badge d3-pop" style="--d:280">叁</div>
+          <div class="d3-rise" style="--d:360">
+            <div class="d3-kicker">第三部分 · 1843</div>
+            <h2 class="d3-h2" style="margin:18px 0 10px">从“孔孟信徒”到“拜上帝”</h2>
+          </div>
+        </div>
+        <div class="halves" style="margin-top:56px">
+          <div class="d3-panel d3-rise" style="--d:460">
+            <div class="d3-kicker" style="font-size:13px">他原本相信的</div>
+            <p class="d3-body" style="margin-top:12px">科举取士 · 儒家治道 · 清朝功名</p>
+            <p class="d3-note" style="margin-top:10px">价值由朝廷认可</p>
+          </div>
+          <div class="ch-slash d3-pop" style="--d:560"><i></i></div>
+          <div class="d3-panel d3-rise" style="--d:660">
+            <div class="d3-kicker" style="font-size:13px">他后来相信的</div>
+            <p class="d3-body d3-gold" style="margin-top:12px">异梦验证 · 上帝使命 · 自我赋权</p>
+            <p class="d3-note" style="margin-top:10px">价值来自神圣启示</p>
+          </div>
+        </div>
+        <p class="d3-quote d3-rise" style="--d:820;margin-top:56px;font-size:34px">1843：传统功名体系失去解释力。</p>
+      </div>
+    </div>
+    <div class="notes">
+      第三部分：从“孔孟信徒”到“拜上帝”。
+      1843 年是身份改写的完成点。洪秀全不再把失败理解为个人学业或运气问题，而是把旧的功名体系整体判为无效。
+      他随后以异梦、上帝和使命重新解释自己：**从一个等待朝廷认可的读书人，转向自行赋予权威的宗教领袖。**
+    </div>
+  </section>
+
+  <!-- ============================================ 11 · 决裂 -->
+  <section class="slide s11-break" data-title="改写成功的定义">
+    <div class="d3-scene" data-scene data-tilt="2.4">
+      <div class="d3-layer bleed" style="--z:-620px">
+        <img class="d3-bg" src="img/certificate.jpg" alt="清代文书底图" style="opacity:.28">
+        <div class="d3-scrim-full" style="position:absolute;inset:0"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-340px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-140px;--d:150"></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-80px;--d:190" data-dust="30"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:220">
+        <div class="d3-rise" style="--d:260">
+          <div class="d3-kicker">三、宗教转向</div>
+          <h2 class="d3-h2" style="margin:18px 0 8px">最后一次落榜后，他改写了“成功”的定义</h2>
+        </div>
+        <div class="d3-g2" style="margin-top:30px;gap:56px;align-items:center">
+          <p class="d3-quote d3-rise" style="--d:420;font-size:40px;line-height:1.5">“不考清朝试，<br>不穿清朝服，<br>要自己来开科取士。”<span class="src">洪秀全决裂时的强烈表达</span></p>
+          <div class="d3-g2" style="gap:22px">
+            <div class="d3-card d3-rise" style="--d:520">
+              <span class="idx">旧的解释</span>
+              <h4>考取功名</h4>
+              <p>进入官僚体系<br>由朝廷认可价值</p>
+            </div>
+            <div class="d3-card red d3-rise" style="--d:620">
+              <span class="idx">新的解释</span>
+              <h4>梦是神谕</h4>
+              <p>失败是使命的前兆<br>权威来自上帝</p>
+            </div>
+          </div>
+        </div>
+        <p class="d3-note d3-rise" style="--d:760;margin-top:36px">关键不是情绪，而是权威来源变了：从“朝廷承认”变成“上帝授予”。</p>
+      </div>
+    </div>
+    <div class="notes">
+      材料保留了洪秀全决裂时的强烈表达：“不考清朝试，不穿清朝服，要自己来开科取士。”
+      这句话的关键不是情绪，而是**权威来源发生了变化**：过去他等待清朝科举承认自己；现在他把异梦解释成神谕，把失败解释成使命的前兆，转而声称权威来自上帝。
+      这就是本阶段最重要的一次改写。
+    </div>
+  </section>
+
+  <!-- ============================================ 12 · 上帝次子 -->
+  <section class="slide s12-son" data-title="从异梦到上帝次子">
+    <div class="d3-scene" data-scene data-tilt="2.4">
+      <div class="d3-layer bleed" style="--z:-620px">
+        <img class="d3-bg" src="img/writings.jpg" alt="刻本气息底图" style="opacity:.28">
+        <div class="d3-scrim-full" style="position:absolute;inset:0"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-340px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-140px;--d:150"></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-80px;--d:190" data-dust="30"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:220">
+        <div class="d3-rise" style="--d:260">
+          <div class="d3-kicker">三、宗教转向 · 史料四</div>
+          <h2 class="d3-h2" style="margin:18px 0 8px">从异梦到“上帝次子”</h2>
+        </div>
+        <div class="d3-g2" style="margin-top:24px;gap:56px;align-items:center">
+          <div class="d3-pop" style="--d:400">
+            <div class="d3-plane contain fit" style="height:420px;transform:rotateY(8deg)">
+              <img src="img/bible.jpg" alt="《圣经·新遗诏全书》书影">
+              <span class="d3-tag">《圣经·新遗诏全书》· 1855 年高德译订本</span>
+            </div>
+          </div>
+          <div>
+            <div class="d3-chain d3-rise" style="--d:520">
+              <div class="node"><div class="t">天父</div><div class="d">上帝</div></div>
+              <div class="node"><div class="t">天兄</div><div class="d">耶稣</div></div>
+              <div class="node hot"><div class="t">次子</div><div class="d">洪秀全</div></div>
+            </div>
+            <p class="d3-body d3-rise" style="--d:680;margin-top:26px">末世征战、善恶对立与天国降临的叙事，被装进他的梦与使命。</p>
+          </div>
+        </div>
+        <p class="d3-note d3-rise" style="--d:780;margin-top:30px">一个失意的读书人，就这样用外来宗教重新解释了自己的人生遭遇。</p>
+      </div>
+    </div>
+    <div class="notes">
+      在《劝世良言》之后，洪秀全又研读《圣经》，并在《启示录》上写下批注，留下《钦定旧前遗诏圣书批解》。
+      末世征战、善恶对立、天国降临的叙事，被装进他的梦与使命：**上帝是父亲，耶稣是兄长，他是“次子”。**
+      一个失意的读书人，就这样用外来宗教重新解释自己的人生遭遇，并在 1843 年前后创立了后世所称的拜上帝会。
+    </div>
+  </section>
+
+  <!-- ============================================ 13 · 三股力量 -->
+  <section class="slide s13-forces" data-title="三股力量的交汇">
+    <div class="d3-scene" data-scene data-tilt="2.6">
+      <div class="d3-layer bleed" style="--z:-640px">
+        <img class="d3-bg" src="img/engraving.jpg" alt="版画气氛底图" style="opacity:.26">
+        <div class="d3-scrim-full" style="position:absolute;inset:0"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-340px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-140px;--d:150"></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-80px;--d:190" data-dust="32"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:220">
+        <div class="d3-rise" style="--d:260">
+          <div class="d3-kicker">综合判断</div>
+          <h2 class="d3-h2" style="margin:18px 0 8px">转向发生在三股力量的交汇处</h2>
+        </div>
+        <div class="forces d3-rise" style="--d:420">
+          <div class="forces-row">
+            <div class="forces-tag ink">外部道路</div>
+            <div class="forces-band"><b>四次落榜</b><span>传统上升通道断裂</span></div>
+          </div>
+          <div class="forces-row">
+            <div class="forces-tag gold">内在需要</div>
+            <div class="forces-band"><b>挫败、不甘与自我价值失落</b><span>需要一个新的意义解释</span></div>
+          </div>
+          <div class="forces-row">
+            <div class="forces-tag red">宗教文本</div>
+            <div class="forces-band"><b>《劝世良言》与《启示录》</b><span>提供上帝、斩妖与天国叙事</span></div>
+          </div>
+          <div class="forces-result d3-pop" style="--d:820"><span>宗教领袖</span></div>
+        </div>
+        <p class="d3-note d3-rise" style="--d:900;margin-top:34px">三股力量交汇，他才从一个传统读书人，转向宗教领袖。</p>
+      </div>
+    </div>
+    <div class="notes">
+      洪秀全的转向不能只归因于一本书，也不能只归因于一次梦。
+      **外部**是科举道路反复失败；**内部**是挫败之后重建自我价值的需要；**宗教文本**则提供了一套现成可用的语言和叙事。
+      三股力量交汇，他才从一个传统读书人转向宗教领袖。这个结论来自你提供的评价总结。
+    </div>
+  </section>
+
+  <!-- ============================================ 14 · 结论 -->
+  <section class="slide s14-end" data-title="结论">
+    <div class="d3-scene" data-scene data-tilt="3">
+      <div class="d3-layer bleed" style="--z:-650px">
+        <div class="d3-cloud alt"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-460px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed" style="--z:-360px;--d:60">
+        <img class="d3-bg" src="img/bg_cover.jpg" alt="洪秀全塑像" style="opacity:.46">
+        <div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 46% 46%,rgba(6,6,9,.4),rgba(6,6,9,.94) 74%)"></div>
+      </div>
+      <div class="d3-layer bleed d3-grain" style="--z:-150px;--d:150"></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-70px;--d:210" data-dust="44"></div>
+      <div class="d3-layer pad" style="--z:80px;--d:240">
+        <div class="d3-rise" style="--d:280">
+          <div class="d3-kicker">结论 · 第二阶段预告</div>
+        </div>
+        <div class="d3-explode" data-brush data-brush-value="反抗旧秩序　却未能跳出旧式思想" style="margin-top:16px">
+          <span data-brush-text>反抗旧秩序　却未能跳出旧式思想</span>
+        </div>
+        <div class="d3-g2" style="margin-top:34px;gap:56px;align-items:start">
+          <div class="d3-col" style="gap:24px">
+            <ol class="d3-end-list d3-rise" style="--d:520">
+              <li><span class="k">01</span><div><b>科举失败切断了他原本相信的人生道路。</b>四次落榜，晚清僵化的科举制度阻断了底层读书人的上升通道。</div></li>
+              <li><span class="k">02</span><div><b>异梦让挫败第一次获得神圣解释。</b>病中的幻觉，被后来的他整理成使命。</div></li>
+              <li><span class="k">03</span><div><b>宗教文本把个人危机改写为救世使命。</b>《劝世良言》与《启示录》提供了现成的语言。</div></li>
+              <li><span class="k">04</span><div><b>这种选择能够动员反抗，也带着旧式思想的桎梏。</b>它可以奋起反抗旧秩序，却难以跳出旧式思想本身。</div></li>
+            </ol>
+            <p class="d3-note d3-rise" style="--d:760">下一阶段要回答的问题：一套宗教组织，如何走向政治动员，又如何在权力中变形。</p>
+          </div>
+          <div class="d3-pop" style="--d:640">
+            <div class="d3-plane" style="transform:rotateY(-8deg)">
+              <img src="img/bg_cover.jpg" alt="洪秀全塑像">
+              <span class="d3-tag">1814—1864 · 广东花县 → 天京</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d3-layer d3-slot-br" style="--z:250px;--d:1000">
+        <div class="d3-seal" aria-hidden="true"><span>缘</span><span>起</span><span>已</span><span>成</span></div>
+      </div>
+    </div>
+    <div class="notes">
+      收束时不要把洪秀全简单解释为受骗或迷信。他的选择有清晰的心理与时代路径：**科举失败切断旧路，异梦留下新的自我解释，宗教文本又把个人危机改写成救世使命。**
+      这种思想能够组织反抗，却也无法跳出旧式思想的框架——这是农民阶级的局限，也是这一阶段留给下一阶段的问题。
+      接下来我们进入下一个板块，看看洪秀全是如何从一个革命领袖逐步变为封建帝王的。
+    </div>
+  </section>
+
+</div>
+
+<div class="progress-bar"><span></span></div>
+<script src="assets/runtime.js"></script>
+<script src="assets/animations/fx-runtime.js"></script>
+<script src="deck3d.js"></script>
+</body>
+</html>

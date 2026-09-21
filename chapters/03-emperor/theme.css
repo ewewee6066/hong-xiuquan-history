@@ -1,0 +1,40 @@
+/* theme: 血墨金（blood-ink-gold）— 只覆盖 assets/base.css 的 token，不改版式。
+ * 注意：assets/animations/fx/*.js 取色读的是 --accent / --accent-2 / --ok /
+ * --warn / --danger，所以 --ok 也必须落在红金体系里，否则粒子会跳出配色。
+ */
+:root{
+  --bg:#07070a;
+  --bg-soft:#0c0c11;
+  --surface:rgba(255,255,255,.045);
+  --surface-2:rgba(255,255,255,.075);
+  --border:rgba(255,255,255,.12);
+  --border-strong:rgba(255,255,255,.24);
+  --text-1:#f4efe6;
+  --text-2:#c3b8a6;
+  --text-3:#8b8071;
+  --accent:#d4222b;
+  --accent-ink:#ffffff;
+  --accent-2:#e3b04b;
+  --accent-3:#7a1d16;
+  --good:#b8863b;
+  --ok:#b8863b;
+  --warn:#e3b04b;
+  --bad:#d4222b;
+  --danger:#e0501f;
+  --grad:linear-gradient(120deg,#7a1d16,#d4222b 46%,#e3b04b);
+  --grad-soft:linear-gradient(120deg,rgba(122,29,22,.45),rgba(212,34,43,.22) 46%,rgba(227,176,75,.26));
+  --radius:12px;
+  --radius-sm:8px;
+  --radius-lg:22px;
+  --shadow:0 14px 36px rgba(0,0,0,.55),0 2px 8px rgba(0,0,0,.45);
+  --shadow-lg:0 34px 90px rgba(0,0,0,.72),0 10px 28px rgba(0,0,0,.55);
+  --font-sans:'Microsoft YaHei UI','Microsoft YaHei','PingFang SC','Noto Sans SC',system-ui,sans-serif;
+  --font-serif:'Source Han Serif SC','Noto Serif SC','Songti SC','STSong','SimSun',ui-serif,serif;
+  --font-display:'Source Han Serif SC','Noto Serif SC','Songti SC','STSong','SimSun',ui-serif,serif;
+  --font-kai:'KaiTi','STKaiti','Kaiti SC','楷体','Songti SC',serif;
+  --font-mono:'JetBrains Mono','Cascadia Mono',Consolas,ui-monospace,monospace;
+  --gold:#e3b04b;
+  --blood:#d4222b;
+  --ink:#08080b;
+  --letter-tight:-.02em;
+}

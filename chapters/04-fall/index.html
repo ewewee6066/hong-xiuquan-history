@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="blood-ink-gold"
+      data-themes="blood-ink-gold,gruvbox-dark,magazine-bold"
+      data-theme-base="assets/themes/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>洪秀全的末路 · 3D 动态演示</title>
+<meta name="theme-color" content="#09090b">
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" id="theme-link" href="theme.css">
+<link rel="stylesheet" href="assets/animations/animations.css">
+<link rel="stylesheet" href="deck3d.css">
+<link rel="stylesheet" href="molu.css">
+<link rel="stylesheet" href="../../assets/series.css">
+<script>
+  /* ?static=1 -> 静态捕获模式：入场动画停在终态，便于截图自检 */
+  if (/(^|[?&])static=1/.test(location.search)) {
+    document.documentElement.classList.add('capture');
+  }
+</script>
+</head>
+<body>
+<nav class="series-nav" aria-label="专题章节导航">
+  <a href="../03-emperor/">上一章</a>
+  <a class="series-home" href="../../">专题目录</a>
+  <span class="series-position">04 / 04</span>
+</nav>
+<div class="deck">
+  <div class="d3-spot"></div>
+  <div class="deck-header">
+    <span>洪秀全人物史 · 第四章</span>
+    <span>时代洪流中的一生</span>
+  </div>
+  <div class="deck-footer">
+    <span>太平天国 1856 — 1864</span>
+    <span class="slide-number" data-current="1" data-total="17"></span>
+  </div>
+
+  <!-- ================================================== 01 · 封面 -->
+  <section class="slide s-cover" data-title="封面 · 洪秀全的末路">
+    <div class="d3-scene" data-scene data-tilt="3">
+      <div class="d3-layer bleed" style="--z:-480px">
+        <img class="d3-bg" src="img/cover_tianjing.jpg" alt="天京内讧 后世历史画">
+      </div>
+      <div class="d3-layer bleed" style="--z:-390px;--d:60">
+        <div class="d3-cloud"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-340px;--d:100">
+        <div style="position:absolute;inset:0;background:linear-gradient(94deg,rgba(6,6,9,.93) 0%,rgba(6,6,9,.68) 34%,rgba(6,6,9,.34) 66%,rgba(6,6,9,.6) 100%)"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-210px;--d:140"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-150px;--d:180"></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-70px;--d:220" data-dust="46"></div>
+      <div class="d3-layer bleed d3-vig" style="--z:-50px;--d:220"></div>
+      <div class="d3-layer pad" style="--z:80px;--d:260">
+        <div class="cover-stack">
+          <div class="d3-kicker d3-rise" style="--d:300">中国近代史 · 史料图像专题</div>
+          <h1 class="d3-h1 d3-extrude d3-rise" style="--d:400">洪秀全的末路</h1>
+          <div class="cover-rule d3-rise" style="--d:540"></div>
+          <p class="cover-sub d3-rise" style="--d:600">天京事变 · 腐化 · 陷落与死亡</p>
+          <p class="d3-lede d3-rise" style="--d:700">当权力只剩神话，帝王的末路便从宫城内部开始。</p>
+          <div class="d3-chips d3-rise" style="--d:820">
+            <span class="d3-chip gold">1856 — 1864</span>
+            <span class="d3-chip">天京 · 南京</span>
+            <span class="d3-chip red">由多份一手文书互证</span>
+          </div>
+        </div>
+      </div>
+      <div class="d3-layer d3-slot-br" style="--z:250px;--d:1000">
+        <div class="d3-seal" aria-hidden="true"><span>天</span><span>京</span><span>陷</span><span>落</span></div>
+      </div>
+    </div>
+    <div class="notes">
+      各位老师、同学好。今天这一讲叫《洪秀全的末路》，讲的是 1856 到 1864 这八年：一个曾经把千万农民动员起来的政权，是怎么从内部垮掉的。
+      封面用的是后世追绘的《天京内讧图》，它只作叙事背景，不作为同时代的图像证据——这一点我后面还会再强调。
+      全篇走三条线：第一，天京事变如何摧毁了权力结构；第二，腐化如何耗尽了制度资源；第三，陷落与死亡如何由多份一手文书彼此印证、也彼此冲突。
+      故事的落点不是城破那一天，而是权力失去制衡的那一刻。
+    </div>
+  </section>
+
+  <!-- ================================================== 02 · 核心判断 -->
+  <section class="slide s-thesis" data-title="核心判断 · 末路并非始于城破">
+    <div class="d3-scene" data-scene data-tilt="2.2">
+      <div class="d3-layer bleed" style="--z:-620px"><div class="d3-cloud"></div></div>
+      <div class="d3-layer bleed" style="--z:-400px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-140px;--d:120"></div>
+      <div class="d3-layer bleed d3-vig" style="--z:-40px;--d:160"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:200">
+        <div class="d3-rise" style="--d:240">
+          <div class="d3-kicker">核心判断 · 全篇结构</div>
+          <h2 class="d3-h2" style="margin:22px 0 10px">末路并非始于城破</h2>
+          <p class="m-sub d3-rise" style="--d:360">它始于权力失去制衡之后。</p>
+        </div>
+        <div class="m-rows" style="margin-top:48px">
+          <div class="m-row d3-rise" style="--d:500">
+            <div class="yr">1856</div>
+            <div class="hd">天京事变</div>
+            <div class="ds">异姓诸王相继被清除，神权体系裂开——从此再也没有人能对天王的权力说“不”。</div>
+          </div>
+          <div class="m-row d3-rise" style="--d:620">
+            <div class="yr">1859</div>
+            <div class="hd">批而不行</div>
+            <div class="ds">《资政新篇》获准颁行，却始终没有进入执行——制度只剩下“批准”的外观。</div>
+          </div>
+          <div class="m-row hot d3-rise" style="--d:740">
+            <div class="yr">1864</div>
+            <div class="hd">城破与死亡</div>
+            <div class="ds">天堡城失守，太平门被炸开；而天王究竟是病死还是服毒，材料的说法从此分裂。</div>
+          </div>
+        </div>
+        <p class="d3-note d3-rise" style="--d:900;margin-top:34px">三个年份不是三件事，而是同一条下坡路上的三个刻度。</p>
+      </div>
+    </div>
+    <div class="notes">
+      先给全篇一个判断：末路不是从 1864 年城破那天开始的。
+      1856 年的天京事变是政治转折点。破江南、江北大营之后，太平天国正处在军事上的高峰，可就在这几个月里，核心领导层几乎全灭。从制度上看，异姓诸王被清除之后，再没有任何力量能制衡天王。
+      1859 年的《资政新篇》显示另一种失效：方案被“旨准颁行”，却没有进入执行——授权符号和实际执行分离了。
+      1864 年才是军事和政治的总崩溃：天堡城失守，太平门被炸开，而洪秀全的死因也开始分裂成几种说法。
+      所以我请大家带着一个问题听后面的内容：权力一旦失去制衡，它会先坏在哪一环？
+    </div>
+  </section>
+
+  <!-- ================================================== 03 · 第一幕 -->
+  <section class="slide s-act1" data-title="第一幕 · 1856 天京事变">
+    <div class="d3-scene" data-scene data-tilt="2.4">
+      <div class="d3-layer bleed" style="--z:-580px"><div class="d3-cloud"></div></div>
+      <div class="d3-layer" style="--z:-320px;--d:60">
+        <div class="m-half-right"><img src="img/museum.jpg" alt="太平天国历史博物馆 · 洪秀全塑像"></div>
+      </div>
+      <div class="d3-layer bleed d3-grain" style="--z:-120px;--d:120"></div>
+      <div class="d3-layer bleed d3-vig" style="--z:-30px;--d:150"></div>
+      <div class="d3-layer pad" style="--z:80px;--d:200">
+        <div style="max-width:840px">
+          <div class="d3-kicker d3-rise" style="--d:240">第一幕 · 转折</div>
+          <div class="m-act-year d3-rise" style="--d:340;margin-top:12px">1856</div>
+          <h2 class="d3-h2 d3-rise" style="--d:460;margin:4px 0 20px">天京事变</h2>
+          <p class="d3-lede d3-rise" style="--d:560">一场发生在胜利巅峰的内部屠杀</p>
+          <p class="d3-body d3-rise" style="--d:660;margin-top:26px;max-width:660px">破江南、江北大营之后，太平天国的军事形势正处在最好的时候；而就在同一年，核心领导层在数月之内几乎全灭。</p>
+          <div class="d3-rise" style="--d:800;margin-top:40px"><span class="m-label">转折点</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      第一幕，1856 年，天京事变。
+      这一年太平天国在军事上正处在高峰：刚刚攻破清军的江南大营和江北大营，天京的包围解除了。可也是在这一年，领导层开始互相屠杀。
+      画面右侧是南京瞻园，原是东王杨秀清的王府所在地，今天建成了太平天国历史博物馆。
+      我这一页想强调的不是血腥，而是时间点：它发生在胜利的巅峰，而不是失败的谷底。这说明问题不出在敌人太强，而出在权力结构本身。
+    </div>
+  </section>
+
+  <!-- ================================================== 04 · 神权结构 -->
+  <section class="slide s-power" data-title="神权结构 · 谁能代表天父">
+    <div class="d3-scene" data-scene data-tilt="2.4">
+      <div class="d3-layer bleed" style="--z:-600px"><div class="d3-cloud alt"></div></div>
+      <div class="d3-layer bleed" style="--z:-420px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-130px;--d:120"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:200">
+        <div class="d3-rise" style="--d:240">
+          <div class="d3-kicker">神权结构 · 事变的根源</div>
+          <h2 class="d3-h2" style="margin:20px 0 12px">谁能代表“天父”</h2>
+          <p class="d3-lede">名义上的最高权力，与实际的解释权发生冲突</p>
+        </div>
+        <div class="d3-g2" style="margin-top:48px;gap:70px;align-items:center">
+          <div class="d3-pop" style="--d:420">
+            <div class="d3-plane contain" style="height:430px;transform:rotateY(11deg) rotateX(-2deg)">
+              <img src="img/lixiucheng_zhuwang.jpg" alt="李秀成亲笔供词 · 述诸王">
+              <span class="d3-tag">李秀成亲笔供词 · 述诸王</span>
+            </div>
+          </div>
+          <div>
+            <div class="m-vs">
+              <div class="d3-rise" style="--d:520">
+                <p class="who">洪秀全</p>
+                <p class="role">“天父次子”<br>受命下凡的君主</p>
+                <p class="pow gold">名义最高</p>
+              </div>
+              <div class="bar"></div>
+              <div class="d3-rise" style="--d:640">
+                <p class="who">杨秀清</p>
+                <p class="role">“天父下凡”的传声筒<br>在人间代天训话</p>
+                <p class="pow red">可以代天训斥天王</p>
+              </div>
+            </div>
+            <p class="d3-quote d3-rise" style="--d:800;margin-top:42px;font-size:33px">洪秀全的合法性依赖神话，杨秀清却掌握神话的即时解释权。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      天京事变的根子，在神权结构里。
+      洪秀全的身份是“天父次子”，他的合法性来自神话。可是神话不能自己说话，得有人在人间替天父说话——这个人就是杨秀清。他借“天父下凡”的名义，可以当众训斥天王，甚至打天王的板子。
+      于是就出现一个死结：名义上的最高权力在洪秀全手里，而解释神话的即时权力在杨秀清手里。
+      左边的材料是李秀成亲笔供词中“述诸王”的部分。李秀成写杨秀清“权太重”，也记下了“逼封万岁”的说法。这里要说明分寸：逼封到底是否真有其事，学界一直有争议，所以这一页我只呈现制度矛盾，不去断定那件具体的事。
+    </div>
+  </section>
+
+  <!-- ================================================== 05 · 时间线 -->
+  <section class="slide s-timeline" data-title="时间线 · 1856—1857">
+    <div class="d3-scene" data-scene data-tilt="2.2">
+      <div class="d3-layer bleed" style="--z:-620px"><div class="d3-cloud"></div></div>
+      <div class="d3-layer bleed" style="--z:-380px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-140px;--d:120"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:200">
+        <div class="d3-rise" style="--d:240">
+          <div class="d3-kicker">天京事变时间线 · 1856 — 1857</div>
+          <h2 class="d3-h2" style="margin:20px 0 10px">数月之内，核心层崩解</h2>
+          <p class="d3-lede" style="max-width:1360px">从诛杀东王，到逼走翼王——不到一年，最早起事的那批人只剩天王一个。</p>
+        </div>
+        <div class="m-tl" style="margin-top:56px">
+          <div class="m-tl-glow" aria-hidden="true"></div>
+          <div class="m-tl-node" style="--i:0">
+            <div class="date">1856 · 9月2日</div>
+            <div class="dot"></div>
+            <div class="ev"><b>杨秀清及部属被杀</b>韦昌辉奉召回京，东王府被血洗。</div>
+          </div>
+          <div class="m-tl-node" style="--i:1">
+            <div class="date">11月上旬</div>
+            <div class="dot"></div>
+            <div class="ev"><b>洪秀全诛韦昌辉</b>屠杀扩大之后，天王转而处置执行者。</div>
+          </div>
+          <div class="m-tl-node" style="--i:2">
+            <div class="date">11月28日</div>
+            <div class="dot"></div>
+            <div class="ev"><b>秦日纲、陈承瑢被处死</b>牵连者继续扩大，旧部人人自危。</div>
+          </div>
+          <div class="m-tl-node" style="--i:3">
+            <div class="date">1856年11月</div>
+            <div class="dot"></div>
+            <div class="ev"><b>石达开回京辅政</b>唯一还有威望的异姓王回来收拾局面。</div>
+          </div>
+          <div class="m-tl-node hot" style="--i:4">
+            <div class="date">1857年5月</div>
+            <div class="dot"></div>
+            <div class="ev"><b>石达开离京出走</b>辅政半年即被猜忌，带兵出走、另立旗号。</div>
+          </div>
+        </div>
+        <p class="d3-note d3-rise" style="--d:1400;margin-top:58px">“逼封万岁”有争议，权力清洗造成的结构性后果没有争议——从此无人能与天王并肩。</p>
+      </div>
+    </div>
+    <div class="notes">
+      这条时间线据文稿整理。
+      1856 年 9 月 2 日，韦昌辉奉召回京，诛杀杨秀清及其部属；11 月上旬，洪秀全反过来诛韦昌辉；11 月 28 日，秦日纲、陈承瑢被处死；同月，石达开回京辅政；到 1857 年 5 月，石达开也被猜忌，离京出走。
+      请注意这条线的方向：它不是“平定叛乱”，而是“清理自己人”。不到一年，当年一起起事的人只剩下洪秀全一个。
+      也说明一句史料边界：关于“逼封万岁”，张汝南、知非子、《石达开自述》和史式的观点互相冲突。我个人的判断是——无论那件事真假，清洗造成的结构性后果都是清楚的：从此天京没有第二个权力中心。
+    </div>
+  </section>
+
+  <!-- ================================================== 06 · 八位万岁 -->
+  <section class="slide s-seal" data-title="事变的物证 · 八位万岁">
+    <div class="d3-scene" data-scene data-tilt="2.4">
+      <div class="d3-layer bleed" style="--z:-620px"><div class="d3-cloud"></div></div>
+      <div class="d3-layer bleed" style="--z:-400px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-140px;--d:120"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:200">
+        <div class="d3-g2" style="align-items:center;gap:70px">
+          <div>
+            <div class="d3-rise" style="--d:240">
+              <div class="d3-kicker">事变后的物证 · 天王玉玺</div>
+              <h2 class="d3-h2" style="margin:22px 0 14px">“八位万岁”</h2>
+              <p class="m-sub" style="font-size:32px">权力越流失，符号越加码</p>
+              <p class="d3-body" style="margin-top:24px;max-width:640px">事变之后，洪秀全没有改革神权结构，而是继续给玺文、国号与身份增加神圣称谓。玺文里出现了“八位万岁”——这个数字把洪秀全的家族与上帝、耶稣排进了同一套神圣谱系。</p>
+            </div>
+            <div class="d3-note d3-rise" style="--d:520;margin-top:34px">
+              <div style="height:3px;background:linear-gradient(90deg,var(--accent),transparent);margin-bottom:22px"></div>
+              “万岁”原本是最高权力的标志，在这里却变成了神权家庭内部的一种分配。
+            </div>
+            <p class="d3-pop d3-small" style="--d:640;margin-top:30px;color:var(--text-3)">天王洪秀全玉玺 · 1864 年天京陷落时由湘军缴获 · 中国国家博物馆藏</p>
+          </div>
+          <div class="m-stamp" style="--d:420">
+            <div class="inner">
+              <img src="img/seal.jpg" alt="天王洪秀全玉玺">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      事变之后，洪秀全拿什么来巩固权力？他选择的是继续加码符号。
+      这方玉玺 1864 年天京陷落时被湘军缴获，今天藏在中国国家博物馆。玺文里有“八位万岁”这样的字样。
+      “万岁”这两个字，在传统政治里是最高权力的标志，只有皇帝一个人能用。可在这方玺上，它变成了一个可以分配给神权家庭的称谓——洪秀全自己、他的儿子、天父、天兄，都在这套谱系里。
+      所以这一页的判断是：权力越流失，符号越加码。当制度约束不了人，神话就被反复加粗。这枚印章就是最直接的物证。
+    </div>
+  </section>
+
+  <!-- ================================================== 07 · 第二幕 -->
+  <section class="slide s-act2" data-title="第二幕 · 腐化">
+    <div class="d3-scene" data-scene data-tilt="2.4">
+      <div class="d3-layer bleed" style="--z:-470px">
+        <img class="d3-bg" src="img/tianwangfu_gate.jpg" alt="1864 年画刊中的天王府正门">
+      </div>
+      <div class="d3-layer bleed" style="--z:-360px;--d:60">
+        <div style="position:absolute;inset:0;background:linear-gradient(96deg,rgba(6,6,9,.96) 0%,rgba(6,6,9,.84) 40%,rgba(6,6,9,.44) 100%)"></div>
+      </div>
+      <div class="d3-layer bleed d3-grain" style="--z:-130px;--d:120"></div>
+      <div class="d3-layer bleed d3-vig" style="--z:-30px;--d:150"></div>
+      <div class="d3-layer pad" style="--z:80px;--d:200">
+        <div style="max-width:900px">
+          <div class="d3-kicker d3-rise" style="--d:240">第二幕</div>
+          <div class="m-act-year d3-rise" style="--d:340;margin-top:14px;font-size:118px">腐化</div>
+          <h2 class="d3-h2 d3-rise" style="--d:460;margin:6px 0 22px">宫殿 · 圣库 · 后宫</h2>
+          <p class="d3-body d3-rise" style="--d:580;max-width:700px">制约者消失之后，制度只剩“批准”的外观，资源则流向宫城与王府。</p>
+          <div class="d3-rise" style="--d:720;margin-top:44px;max-width:760px">
+            <div class="d3-kicker" style="font-size:14px;margin-bottom:14px">第二幕的问题</div>
+            <p class="m-sub" style="font-size:34px;color:#f1e4cf;text-shadow:none">天国的“公”，如何变成帝王的“私”？</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      第二幕讲腐化。这里的腐化不是指某个人贪了多少钱，而是指整个资源分配的走向变了。
+      画面上这张图是 1864 年西方画刊里的天王府正门。关于它出自法国画刊还是英国《伦敦新闻画报》，两种图注说法打架，我在图注里保留了“出处存疑”的说明。
+      天京事变之后，能制约天王的力量没有了。制度只剩下“批准”的外观：文件照样颁行，事情照样不办。与此同时，人力物力开始往宫城和王府里流。
+      这一幕要回答的问题就是这一句：天国的“公”，是怎么一步步变成帝王的“私”的？
+    </div>
+  </section>
+
+  <!-- ================================================== 08 · 资政新篇 -->
+  <section class="slide s-zizheng" data-title="《资政新篇》1859 · 批而不行">
+    <div class="d3-scene" data-scene data-tilt="2.4">
+      <div class="d3-layer bleed" style="--z:-600px"><div class="d3-cloud alt"></div></div>
+      <div class="d3-layer bleed" style="--z:-420px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-130px;--d:120"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:200">
+        <div class="d3-rise" style="--d:240">
+          <div class="d3-kicker">制度能力 · 1859</div>
+          <h2 class="d3-h2" style="margin:20px 0 12px">“旨准颁行”与“未见一谋”</h2>
+        </div>
+        <div class="d3-g2" style="margin-top:44px;gap:76px;align-items:center">
+          <div class="d3-pop" style="--d:420">
+            <div class="d3-plane contain" style="height:470px;transform:rotateY(-12deg) rotateX(3deg)">
+              <img src="img/zizheng.jpg" alt="《资政新篇》原刻本首页">
+              <span class="d3-tag">《资政新篇》1859 年原刻本首页</span>
+            </div>
+          </div>
+          <div class="m-versus">
+            <div class="row d3-rise" style="--d:560">
+              <p class="big gold">旨准颁行</p>
+              <p class="cap">洪秀全给了方案一个充分的合法性外观——钦定、颁行。</p>
+            </div>
+            <div class="split"></div>
+            <div class="row d3-rise" style="--d:700">
+              <p class="big red">未见一谋</p>
+              <p class="cap">李秀成供词对这整套方案执行结果的五个字判断。</p>
+            </div>
+            <p class="d3-note d3-rise" style="--d:840;margin-top:6px">一份被“批准”的改革方案，和一套不运转的执行系统——这就是制度失效的样子。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      1859 年，洪仁玕从香港来到天京，很快被封为干王，提出了《资政新篇》。这份方案在当时非常超前：办报纸、开矿、修铁路、设银行、讲法治，都是近代化的路子。
+      洪秀全的态度看起来很支持——他“旨准颁行”，等于给了方案最高的合法性。
+      但李秀成在供词里写下五个字：“未见一谋”。方案是颁行了，却几乎没有一条真正落地。
+      所以这一页用两份材料对照：一份给的是许可，一份给的是结果。合在一起看，就是“批而不行”。当一个政权的批准与执行分离，它就已经失去了自我更新的能力。
+    </div>
+  </section>
+
+  <!-- ================================================== 09 · 同一张椅子 -->
+  <section class="slide s-chair" data-title="同一张椅子 · 明王府到总统府">
+    <div class="d3-scene" data-scene data-tilt="2">
+      <div class="d3-layer" style="--z:-340px;--d:0">
+        <div class="m-duo">
+          <figure><img src="img/president_gate.jpg" alt="总统府大门 · 天王府旧址"></figure>
+          <figure><img src="img/president_hall.jpg" alt="总统府大堂 · 金龙殿基址"></figure>
+        </div>
+        <div class="m-seam"></div>
+        <div class="m-duo-cap">同一处地址 · 南京长江路 292 号</div>
+      </div>
+      <div class="d3-layer bleed d3-grain" style="--z:-120px;--d:120"></div>
+      <div class="d3-layer bleed d3-vig" style="--z:-30px;--d:150"></div>
+      <div class="d3-layer pad" style="--z:80px;--d:200">
+        <div class="d3-g2" style="gap:130px;align-items:center">
+          <div>
+            <div class="d3-kicker d3-rise" style="--d:260">同一张椅子 · 一处地址的四个名字</div>
+            <ul class="m-lineage">
+              <li class="d3-rise" style="--d:400"><b>明王府</b><span>明初汉王府的一部分</span></li>
+              <li class="d3-rise" style="--d:500"><b>清两江总督衙署</b><span>清代江南最高军政机关</span></li>
+              <li class="now d3-rise" style="--d:600"><b>太平天国天王府</b><span>1853 — 1864 · 洪秀全的宫城</span></li>
+              <li class="d3-rise" style="--d:700"><b>民国总统府</b><span>1912 年以后，同一片基址</span></li>
+            </ul>
+          </div>
+          <div>
+            <p class="d3-quote d3-rise" style="--d:820;font-size:38px">他争夺的不是一座新世界，而是旧秩序里的最高位置。</p>
+            <p class="d3-note d3-rise" style="--d:940;margin-top:30px">图注：左为总统府大门，右为总统府大堂（金龙殿基址所在）。同一地点先后是明王府、清两江总督衙署、太平天国天王府与民国总统府。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      这一页我想请大家看一个具体的地点：南京长江路 292 号。
+      明朝初年，这里是汉王府的一部分；清代，这里是两江总督衙署，江南最高的军政机关；1853 年太平军进入南京，洪秀全把这里改建为天王府；1912 年以后，这里又成了民国总统府。
+      四个名字，同一块地基。左边是总统府大门，右边是大堂，也就是天王府金龙殿的基址所在。
+      所以我这一页的结论是：他争夺的不是一座新世界，而是旧秩序里的最高位置。位置换了几任主人，椅子还是那张椅子。这是理解太平天国局限性的一个很直观的入口。
+    </div>
+  </section>
+
+  <!-- ================================================== 10 · 圣库制度 -->
+  <section class="slide s-shengku" data-title="圣库制度 · 承诺与现实">
+    <div class="d3-scene" data-scene data-tilt="2.4">
+      <div class="d3-layer bleed" style="--z:-600px"><div class="d3-cloud"></div></div>
+      <div class="d3-layer bleed" style="--z:-420px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-130px;--d:120"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:200">
+        <div class="d3-rise" style="--d:240">
+          <div class="d3-kicker">圣库制度 · 制度的两面</div>
+          <h2 class="d3-h2" style="margin:20px 0 12px">“物物归上主”之后，谁在支配资源</h2>
+        </div>
+        <div class="d3-g2" style="margin-top:46px;gap:82px;align-items:center">
+          <div class="d3-pop" style="--d:420">
+            <div class="d3-plane contain" style="height:486px;transform:rotateY(12deg) rotateX(-2deg)">
+              <img src="img/shengku_sign.jpg" alt="圣库看守指令木牌">
+              <span class="d3-tag">圣库看守指令木牌</span>
+            </div>
+          </div>
+          <div>
+            <div class="d3-rise" style="--d:540">
+              <div class="d3-kicker" style="font-size:14px">承诺</div>
+              <p class="m-sub" style="font-size:42px;color:#f1e4cf;text-shadow:none;margin-top:14px">天下人人不受私</p>
+            </div>
+            <div class="m-hr"></div>
+            <div class="d3-rise" style="--d:680">
+              <div class="d3-kicker" style="font-size:14px;color:#ff9b93">现实</div>
+              <p class="m-sub" style="font-size:36px;color:#f1e4cf;text-shadow:none;margin-top:14px">王府营造与奢侈生活，从圣库支取</p>
+            </div>
+            <p class="d3-quote d3-rise" style="--d:820;margin-top:38px;font-size:33px">公有制承诺，私有制享受。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      圣库制度是太平天国最有名的一项制度设计：财产归公，按需分配，口号是“物物归上主”“天下人人不受私”。在起事阶段，它确实起到了集中资源、维持军队的作用。
+      但定都天京之后，这套制度慢慢变了味。诸王大兴土木、营造王府，过奢侈生活，钱从哪里来？还是从圣库来。
+      画面上这块木牌是圣库看守的指令牌。它告诉我们这套制度曾经有非常严格的管理规定；可制度越严格，越说明它需要防着人。
+      所以这一页只用八个字概括：公有制承诺，私有制享受。同一个库房，前期养的是军队，后期养的是王府。
+    </div>
+  </section>
+
+  <!-- ================================================== 11 · 第三幕 -->
+  <section class="slide s-act3" data-title="第三幕 · 1864 天京陷落">
+    <div class="d3-scene" data-scene data-tilt="2.4">
+      <div class="d3-layer bleed" style="--z:-580px"><div class="d3-cloud alt"></div></div>
+      <div class="d3-layer" style="--z:-320px;--d:60">
+        <div class="m-half-right"><img src="img/tianbaocheng.jpg" alt="紫金山天堡城遗址文保碑"></div>
+      </div>
+      <div class="d3-layer bleed d3-grain" style="--z:-120px;--d:120"></div>
+      <div class="d3-layer bleed d3-vig" style="--z:-30px;--d:150"></div>
+      <div class="d3-layer pad" style="--z:80px;--d:200">
+        <div style="max-width:840px">
+          <div class="d3-kicker d3-rise" style="--d:240">第三幕 · 陷落</div>
+          <div class="m-act-year d3-rise" style="--d:340;margin-top:12px">1864</div>
+          <h2 class="d3-h2 d3-rise" style="--d:460;margin:4px 0 20px">天京陷落</h2>
+          <p class="d3-body d3-rise" style="--d:580;max-width:700px">当紫金山上的天堡城失守，整座天京暴露在清军的视野之下——城墙再厚，也挡不住居高临下的炮火。</p>
+          <div class="d3-rise" style="--d:720;margin-top:40px">
+            <div class="m-act-year" style="font-size:56px;color:var(--accent-2);text-shadow:none">1853 — 1864</div>
+            <p class="d3-body" style="margin-top:12px;max-width:640px">一块文保碑，恰好写尽天国在南京的全部国祚。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      第三幕，1864 年，天京陷落。
+      军事上的最后一道门是紫金山上的天堡城。它 1853 年修筑，1864 年 2 月 28 日失守。这座堡垒和山脚下的地堡城互为犄角，是拱卫天京的重要据点。它一丢，整座城就暴露在清军居高临下的视野和炮火里。
+      天京从 1853 年定都到 1864 年陷落，一共十一年。画面的文保碑上写着的，恰好就是这个政权的全部国祚。
+      这一页之后，我们就要进入全篇最关键的一段：城是怎么破的，天王是怎么死的，以及为什么不同的材料会给出不同的答案。
+    </div>
+  </section>
+
+  <!-- ================================================== 12 · 城破 -->
+  <section class="slide s-breach" data-title="城破 · 1864年7月19日">
+    <div class="d3-scene" data-scene data-tilt="2.2">
+      <div class="d3-layer bleed" style="--z:-620px"><div class="d3-cloud"></div></div>
+      <div class="d3-layer bleed" style="--z:-420px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer" style="--z:-260px;--d:80">
+        <div class="m-band">
+          <img src="img/taipingmen.jpg" alt="现南京太平门">
+          <div class="m-band-in">
+            <p class="m-band-quote d3-rise" style="--d:640">“曾帅用火攻倒京城，由紫金山龙颈而破。”</p>
+            <p class="m-band-src d3-rise" style="--d:760">李秀成亲笔供词</p>
+            <div class="m-band-rule"></div>
+            <p class="m-band-foot d3-rise" style="--d:880">午后，湘军由太平门方向突破。天京陷落。</p>
+          </div>
+        </div>
+      </div>
+      <div class="d3-layer bleed d3-grain" style="--z:-110px;--d:140"></div>
+      <div class="d3-layer pad" style="--z:80px;--d:200;justify-content:flex-start;padding-top:118px">
+        <div class="d3-rise" style="--d:280">
+          <div class="d3-kicker">城破 · 1864 年 7 月 19 日</div>
+          <h2 class="d3-h2" style="margin:22px 0 0">太平门外，火药炸开城墙</h2>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      1864 年 7 月 19 日午后，湘军炸开太平门方向的城墙，天京陷落。画面上是今天的南京太平门，门外的地名叫龙脖子、龙颈。
+      引文出自李秀成亲笔供词：“是午时之后，曾帅用火攻倒京城，由紫金山龙颈而破，全军入城，我军不能为敌。”注意，这是太平天国自己人被俘之后写下的记录。
+      到这里，军事上的故事结束了。但真正难讲的是接下来这几天：天王府里发生了什么，洪秀全究竟是怎么死的。
+      因为不同的材料给出的答案并不一样——这就把我们带到全篇最需要“史料意识”的地方。
+    </div>
+  </section>
+
+  <!-- ================================================== 13 · 死亡公案 -->
+  <section class="slide s-death" data-title="死亡公案 · 三份文书对质">
+    <div class="d3-scene" data-scene data-tilt="2.2">
+      <div class="d3-layer bleed" style="--z:-620px"><div class="d3-cloud"></div></div>
+      <div class="d3-layer bleed" style="--z:-500px;--d:0">
+        <img class="d3-bg" src="img/lixiucheng_juan.jpg" alt="李秀成亲笔供词长卷" style="opacity:.2">
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,7,10,.95),rgba(7,7,10,.8) 50%,rgba(7,7,10,.95))"></div>
+      </div>
+      <div class="d3-layer bleed d3-grain" style="--z:-130px;--d:120"></div>
+      <div class="d3-layer bleed d3-vig" style="--z:-30px;--d:150"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:200">
+        <div class="d3-rise" style="--d:240">
+          <div class="d3-kicker">死亡公案 · 材料对质</div>
+          <h2 class="d3-h2" style="margin:20px 0 12px">病死，还是服毒</h2>
+          <p class="d3-lede">同一件事，三份文书给出了两种答案。</p>
+        </div>
+        <div class="m-docs">
+          <div class="m-doc d3-rise" style="--d:500">
+            <div class="idx">文书 甲</div>
+            <h4>李秀成亲笔稿本</h4>
+            <div class="verdict">病死</div>
+            <div class="detail">“不肯食药方。”<br>天王病重之后拒绝服药，四月二十一日去世。</div>
+            <div class="src">亲笔稿本 · 供词系统</div>
+          </div>
+          <div class="m-doc accent d3-rise" style="--d:620">
+            <div class="idx">文书 乙</div>
+            <h4>曾国藩删改刻本</h4>
+            <div class="verdict">服毒</div>
+            <div class="detail">“服毒而亡。”<br>日期记作四月二十七日。</div>
+            <div class="src">删改刻本 · 上呈系统</div>
+          </div>
+          <div class="m-doc d3-rise" style="--d:740">
+            <div class="idx">文书 丙</div>
+            <h4>洪天贵福亲书</h4>
+            <div class="verdict">病死</div>
+            <div class="detail">四月十九日夜四更去世。<br>“病症不知。”</div>
+            <div class="src">幼天王自述 · 亲书</div>
+          </div>
+        </div>
+        <p class="d3-note d3-rise" style="--d:900;margin-top:38px">曾国藩的奏折也写“服毒”，但它明确注明来自“城内各贼供称”，而且前后日期互相矛盾。文稿采用病死说，同时保留这场争议。</p>
+      </div>
+    </div>
+    <div class="notes">
+      洪秀全到底是怎么死的？这不是一个可以随口回答的问题，因为材料本身就分裂。
+      第一份，李秀成的亲笔稿本，写他病重之后“不肯食药方”，也就是拒绝吃药，四月二十一日去世，属于病死。第二份，曾国藩的删改刻本，改成了“服毒而亡”，日期也挪到四月二十七日。第三份，幼天王洪天贵福亲笔自述，说父亲四月十九日夜四更去世，至于病症，他写的是“不知”。
+      还有一份材料是曾国藩的奏折，也写“服毒”，但它明确注明来自“城内各贼供称”，而且前后日期互相矛盾。
+      所以这一页我采用病死说，同时保留争议：文本一旦被删改，就会改变结论。这也提醒我们——被俘者写的供词和上呈朝廷的刻本，不一定是同一份材料。
+    </div>
+  </section>
+
+  <!-- ================================================== 14 · 互证 -->
+  <section class="slide s-check" data-title="互证 · 敌我文书在这里相遇">
+    <div class="d3-scene" data-scene data-tilt="2.4">
+      <div class="d3-layer bleed" style="--z:-600px"><div class="d3-cloud alt"></div></div>
+      <div class="d3-layer bleed" style="--z:-430px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-130px;--d:120"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:200">
+        <div class="d3-rise" style="--d:240">
+          <div class="d3-kicker">互证 · 本讲最坚实的一处证据链</div>
+          <h2 class="d3-h2" style="margin:20px 0 12px">敌我文书在这里相遇</h2>
+        </div>
+        <div class="d3-g2" style="margin-top:44px;gap:84px;align-items:center">
+          <div class="d3-pop" style="--d:420">
+            <div class="d3-plane contain" style="height:470px;transform:rotateY(-11deg) rotateX(3deg)">
+              <img src="img/hongtianguifu_2.jpg" alt="洪天贵福亲书自述第二页">
+              <span class="d3-tag">洪天贵福亲书自述 · 第二页</span>
+            </div>
+          </div>
+          <div>
+            <div class="d3-rise" style="--d:540">
+              <div class="d3-kicker" style="font-size:14px">洪天贵福 · 幼天王自述</div>
+              <p class="d3-quote" style="margin-top:16px;font-size:31px">“不用棺木，是使女官葬的。”</p>
+            </div>
+            <div class="m-hr"></div>
+            <div class="d3-rise" style="--d:700">
+              <div class="d3-kicker" style="font-size:14px;color:#ff9b93">曾国藩奏折 · 验尸记录</div>
+              <p class="d3-quote" style="margin-top:16px;font-size:31px;border-left-color:var(--accent-2)">尸身以绣龙黄缎包裹，未用棺木。</p>
+            </div>
+            <p class="d3-note d3-rise" style="--d:860;margin-top:36px">两套敌对文书彼此印证，构成全篇最坚实的一处证据链。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      前面几份材料互相打架，但有一处材料，敌我双方的说法是对得上的，这就是全篇最坚实的一处证据链。
+      一边是洪秀全的儿子、幼天王洪天贵福亲笔写的自述，他说父亲下葬时“不用棺木，是使女官葬的”。另一边是曾国藩的奏折，里面记下了验尸的结果：尸身用绣龙黄缎包裹，没有用棺木。
+      一方是太平天国自己人，一方是消灭他们的清朝统帅，两边互不相干，却在“没有用棺木”这个细节上对上了。
+      这就是史学研究里最重要的方法之一：互证。当敌对双方的记录在细节上吻合，我们对这件事的判断就可以比只信一边更有底气。清方要验明正身，洪天贵福要说明安葬情形，两种动机不同的记述指向同一个事实。
+    </div>
+  </section>
+
+  <!-- ================================================== 15 · 最后一页 -->
+  <section class="slide s-confession" data-title="最后一页 · 李秀成供词末页">
+    <div class="d3-scene" data-scene data-tilt="2.2">
+      <div class="d3-layer bleed" style="--z:-620px"><div class="d3-cloud"></div></div>
+      <div class="d3-layer bleed" style="--z:-430px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-130px;--d:120"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:200">
+        <div class="d3-g2" style="gap:88px;align-items:center">
+          <div class="d3-pop" style="--d:420">
+            <div class="d3-plane contain" style="height:560px;transform:rotateY(10deg) rotateX(-2deg)">
+              <img src="img/lixiucheng_last.jpg" alt="李秀成亲笔供词末页">
+              <span class="d3-tag">李秀成亲笔供词 · 末页</span>
+            </div>
+          </div>
+          <div>
+            <div class="d3-rise" style="--d:280">
+              <div class="d3-kicker">最后一页 · 纸尽于此</div>
+            </div>
+            <p class="d3-quote d3-rise" style="--d:520;margin-top:28px;font-size:44px">“……实我不知知也，<br>如知……”</p>
+            <div class="m-hr" style="margin:36px 0 30px"></div>
+            <p class="m-close d3-rise" style="--d:700">纸尽。</p>
+            <p class="d3-body d3-rise" style="--d:800;margin-top:18px;font-size:22px">次日，李秀成被杀。</p>
+            <p class="d3-note d3-rise" style="--d:920;margin-top:34px;font-size:21px">一份数万字的自述，最后停在一句没有写完的话上。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      这是李秀成亲笔供词的末页。
+      一部长达数万字的自述，最后停在一句没有写完的话上：“……实我不知知也，如知……”纸不够了，话也就断在那里。第二天，也就是 1864 年 8 月 7 日，李秀成被杀。
+      我想让大家体会这个瞬间：这不是一份从容的回忆录，而是一个人被囚在笼子里，一边写一边被催促留下的最后文字。它既是史料的来源，本身也是一件残留着仓促痕迹的文物。
+      太平天国的故事，最后就停在这样一句没写完的话上。接下来还有一个人——幼天王洪天贵福，他要为这个名号再死一次。
+    </div>
+  </section>
+
+  <!-- ================================================== 16 · 尾声 -->
+  <section class="slide s-epilogue" data-title="尾声 · 末路的终点">
+    <div class="d3-scene" data-scene data-tilt="2.6">
+      <div class="d3-layer bleed" style="--z:-520px">
+        <img class="d3-bg" src="img/hongtianguifu_1.jpg" alt="洪天贵福亲书自述首页">
+      </div>
+      <div class="d3-layer bleed" style="--z:-420px;--d:60">
+        <div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 34% 40%,rgba(6,6,9,.86),rgba(6,6,9,.96) 72%)"></div>
+      </div>
+      <div class="d3-layer bleed d3-grain" style="--z:-140px;--d:120"></div>
+      <div class="d3-layer bleed d3-vig" style="--z:-40px;--d:160"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:200">
+        <div class="d3-rise" style="--d:240">
+          <div class="d3-kicker">尾声 · 1864 年的四天与五个月</div>
+          <h2 class="d3-h2" style="margin:20px 0 14px">末路的终点，不在天王府</h2>
+          <p class="m-sub" style="font-size:44px">而在南昌刑场</p>
+        </div>
+        <div class="m-dates">
+          <div class="d d3-rise" style="--d:520"><div class="dt">6月1日</div><div class="ev">洪秀全病死</div></div>
+          <div class="d d3-rise" style="--d:600"><div class="dt">6月6日</div><div class="ev">洪天贵福登极</div></div>
+          <div class="d d3-rise" style="--d:680"><div class="dt">7月19日</div><div class="ev">天京陷落</div></div>
+          <div class="d hot d3-rise" style="--d:760"><div class="dt">11月18日</div><div class="ev">洪天贵福在南昌被处死</div></div>
+        </div>
+        <p class="d3-note d3-rise" style="--d:900;margin-top:46px;font-size:22px;max-width:1500px">清廷要终结的不只是一个十六岁的孩子，而是“洪秀全”这个仍然能够召集反抗的名号。</p>
+      </div>
+    </div>
+    <div class="notes">
+      这一段我想把最后几个日期摆在一起看。
+      1864 年 6 月 1 日洪秀全死；6 月 6 日，他十六岁的儿子洪天贵福登极，称为幼天王；7 月 19 日天京陷落，幼天王在乱军中逃出；11 月 18 日，他在南昌被凌迟处死。
+      画面背景是洪天贵福亲笔自述的首页，原件藏在台北故宫博物院文献馆。一个十六岁的孩子，被要求在供词里回答父亲的事、朝廷的事、天国的事。
+      所以这一页的判断是：清廷要终结的不只是一个孩子，而是“洪秀全”这个仍然能够召集反抗的名号。人可以被杀掉，名号必须被处理掉——这才是“末路”的最后一步。
+    </div>
+  </section>
+
+  <!-- ================================================== 17 · 结论 -->
+  <section class="slide s-end" data-title="结论 · 一个帝王的末路">
+    <div class="d3-scene" data-scene data-tilt="2.6">
+      <div class="d3-layer bleed" style="--z:-660px;--d:0">
+        <div class="d3-fxstage" data-fx="galaxy-swirl" style="opacity:.42"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-620px;--d:0"><div class="d3-cloud alt"></div></div>
+      <div class="d3-layer bleed" style="--z:-500px;--d:60">
+        <img class="d3-bg" src="img/mural.jpg" alt="太平天国壁画" style="opacity:.3">
+        <div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 46% 46%,rgba(6,6,9,.6),rgba(6,6,9,.95) 74%)"></div>
+      </div>
+      <div class="d3-layer bleed d3-grain" style="--z:-140px;--d:120"></div>
+      <div class="d3-layer bleed d3-vig" style="--z:-40px;--d:160"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:200">
+        <div class="d3-rise" style="--d:240">
+          <div class="d3-kicker">结论 · 一个帝王的末路</div>
+          <h2 class="d3-h2" style="margin:20px 0 12px">他把全部权力，押在一个符号系统上</h2>
+        </div>
+        <div class="d3-g2" style="margin-top:42px;gap:90px;align-items:start">
+          <ol class="d3-end-list d3-rise" style="--d:460">
+            <li><span class="k">01</span><div><b>权力结构：</b>神权解释权的冲突，引爆了内部清洗；事变之后，再没有人能制衡天王。</div></li>
+            <li><span class="k">02</span><div><b>制度能力：</b>批准代替执行，规则让位于身份——《资政新篇》“旨准颁行”却“未见一谋”。</div></li>
+            <li><span class="k">03</span><div><b>资源分配：</b>圣库承诺公共，宫殿兑现特权；天国的“公”变成了帝王的“私”。</div></li>
+            <li><span class="k">04</span><div><b>历史证据：</b>手稿、奏折、遗址彼此校验，也彼此冲突——这正是判断这段历史的方式。</div></li>
+          </ol>
+          <div>
+            <div class="d3-pop" style="--d:620">
+              <div class="d3-plane contain" style="height:300px;transform:rotateY(-9deg) rotateX(3deg)">
+                <img src="img/base_stone.jpg" alt="天王府石基座">
+                <span class="d3-tag">天王府旧址 · 石基座</span>
+              </div>
+            </div>
+            <p class="d3-quote d3-rise" style="--d:760;margin-top:34px;font-size:31px">符号越神圣，现实越脆弱。</p>
+            <p class="d3-note d3-rise" style="--d:880;margin-top:26px">材料边界：评价洪秀全，不能只信太平天国的宣传，也不能只信曾国藩一方的说法。把他自己的文本、同时代人的记录和后人的研究放在一起看，才是讲这段历史应有的分寸。</p>
+          </div>
+        </div>
+        <p class="m-close d3-rise" style="--d:1000;margin-top:30px;font-size:38px">一个推翻了旧王朝的人，最后坐上了同一把椅子。</p>
+      </div>
+    </div>
+    <div class="notes">
+      最后把全篇收在一句话上：他把全部权力，押在一个符号系统上。
+      第一，权力结构上，神权解释权的冲突引爆了内部清洗。事变之后，再没有人能制衡天王。
+      第二，制度能力上，批准代替了执行，规则让位于身份。《资政新篇》被“旨准颁行”，结果是“未见一谋”。
+      第三，资源分配上，圣库承诺的是公共，宫殿兑现的是特权。天国的“公”变成了帝王的“私”。
+      第四，也是我特别想留给大家的：这一段历史的证据本身是分裂的。手稿、奏折、遗址互相校验，也互相冲突。评价洪秀全，不能只信太平天国的宣传，也不能只信曾国藩一方的说法——两边都放在一起，我们才可能靠近一点真相。
+      所以我的结论是：他推翻了旧王朝，最后坐上了同一把椅子。这就是一个帝王的末路。谢谢大家。
+    </div>
+  </section>
+</div>
+
+<div class="progress-bar"><span></span></div>
+<script src="assets/runtime.js"></script>
+<script src="assets/animations/fx-runtime.js"></script>
+<script src="deck3d.js"></script>
+</body>
+</html>

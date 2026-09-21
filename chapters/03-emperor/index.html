@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      data-theme="blood-ink-gold"
+      data-themes="blood-ink-gold,gruvbox-dark,cyberpunk-neon,magazine-bold"
+      data-theme-base="assets/themes/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>洪秀全 · 封建帝王 — 3D 动态演示</title>
+<meta name="theme-color" content="#09090b">
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" id="theme-link" href="theme.css">
+<link rel="stylesheet" href="assets/animations/animations.css">
+<link rel="stylesheet" href="deck3d.css">
+<link rel="stylesheet" href="../../assets/series.css">
+<script>
+  /* ?static=1 -> 静态捕获模式：入场动画停在终态，便于截图自检 */
+  if (/(^|[?&])static=1/.test(location.search)) {
+    document.documentElement.classList.add('capture');
+  }
+</script>
+</head>
+<body>
+<nav class="series-nav" aria-label="专题章节导航">
+  <a href="../02-faith/">上一章</a>
+  <a class="series-home" href="../../">专题目录</a>
+  <span class="series-position">03 / 04</span>
+  <a href="../04-fall/">下一章</a>
+</nav>
+<div class="deck">
+  <div class="d3-spot"></div>
+  <div class="deck-header">
+    <span>洪秀全人物史 · 第三章</span>
+    <span>时代洪流中的一生</span>
+  </div>
+  <div class="deck-footer">
+    <span>太平天国 1851 — 1864</span>
+    <span class="slide-number" data-current="1" data-total="12"></span>
+  </div>
+
+  <!-- ================================================== 01 · 封面 -->
+  <section class="slide s-cover">
+    <div class="d3-scene" data-scene data-tilt="3">
+      <div class="d3-layer bleed" style="--z:-470px">
+        <img class="d3-bg" src="img/bg_cover.jpg" alt="洪秀全塑像">
+      </div>
+      <div class="d3-layer bleed" style="--z:-390px;--d:60">
+        <div class="d3-cloud"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-340px;--d:100">
+        <div style="position:absolute;inset:0;background:linear-gradient(94deg,rgba(6,6,9,.9) 0%,rgba(6,6,9,.62) 36%,rgba(6,6,9,.3) 68%,rgba(6,6,9,.56) 100%)"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-210px;--d:140"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-150px;--d:180"></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-70px;--d:220" data-dust="46"></div>
+      <div class="d3-layer bleed d3-vig" style="--z:-50px;--d:220"></div>
+      <div class="d3-layer pad" style="--z:80px;--d:260">
+        <div class="cover-stack">
+          <div class="d3-kicker d3-rise" style="--d:280">中国近代史 · 封建帝王</div>
+          <h1 class="d3-h1 d3-extrude d3-rise" style="--d:380">洪秀全</h1>
+          <div class="cover-rule d3-rise" style="--d:520"></div>
+          <p class="cover-sub d3-rise" style="--d:580">反抗者，如何成为天王</p>
+          <p class="d3-lede d3-rise" style="--d:680">他用一套宗教语言，把农民的不满组织成一支能建政权的力量；然后，他把玉玺、宫殿、等级、封王和独断，一件一件地搬回了自己的宫里——一个反抗者，就这样完成了向封建帝王的转身。</p>
+          <div class="d3-chips d3-rise" style="--d:800">
+            <span class="d3-chip gold">1814—1864 · 广东花县</span>
+            <span class="d3-chip">太平天国 · 1851—1864</span>
+            <span class="d3-chip red">从农民起义领袖到封建帝王</span>
+          </div>
+        </div>
+      </div>
+      <div class="d3-layer d3-slot-br" style="--z:250px;--d:1000">
+        <div class="d3-seal" aria-hidden="true"><span>太</span><span>平</span><span>天</span><span>王</span></div>
+      </div>
+    </div>
+    <div class="notes">
+      各位老师、同学好。今天我要讲的这个人，站在两个完全相反的评价中间：他是中国近代规模最大的农民战争的发动者——十四年，席卷大半个中国；他也是同一场战争里，把自己关进深宫、把平等改写成等级的那个人。
+      所以我不打算只把他当英雄，也不打算只把他当疯子。我想回答一个问题：**为什么一个反压迫起兵的人，最后把自己做成了皇帝？**
+      这一页是整份报告的起点：一个反抗者，如何完成向封建帝王的转身。
+    </div>
+  </section>
+
+  <!-- ================================================== 06 · 玉玺 -->
+  <section class="slide s-seal">
+    <div class="d3-scene" data-scene data-tilt="2.4">
+      <div class="d3-layer bleed" style="--z:-620px;--d:0"><div class="d3-cloud"></div></div>
+      <div class="d3-layer bleed" style="--z:-380px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed" style="--z:-340px;--d:60">
+        <div class="d3-scrim-full" style="position:absolute;inset:0"></div>
+      </div>
+      <div class="d3-layer pad" style="--z:60px;--d:180">
+        <div class="d3-g2" style="align-items:center;gap:44px">
+          <div>
+            <div class="d3-rise" style="--d:220">
+              <div class="d3-kicker">证据一 · 天王玉玺</div>
+              <h2 class="d3-h2" style="margin:20px 0 18px">神权的外衣，<br>专制的内核</h2>
+              <p class="d3-body">天京陷落时缴获的天王玉玺，刻有“天父上帝、永定乾坤”等文字，把洪秀全家族与上帝、耶稣并列在同一套神圣谱系里。</p>
+            </div>
+            <div class="d3-g2" style="margin-top:34px;gap:20px">
+              <div class="d3-card gold d3-rise" style="--d:420">
+                <h4>玺文里的天国</h4>
+                <p>天父上帝 · 永定乾坤<br>神圣、永恒、统一</p>
+              </div>
+              <div class="d3-card red d3-rise" style="--d:520">
+                <h4>现实里的天国</h4>
+                <p>内讧 · 割据 · 城破<br>四分五裂，摇摇欲坠</p>
+              </div>
+            </div>
+            <p class="d3-note d3-rise" style="--d:640;margin-top:30px">天王玉玺 — 神权外衣下的专制王权。宏大玺文与四分五裂的现实，构成最直接的反差：他靠宗教起事，最后也只能靠宗教神话来维系权力。</p>
+          </div>
+          <div class="d3-pop" style="--d:300">
+            <div class="d3-ornament" style="--d:420">
+              <svg viewBox="0 0 720 190" role="img" aria-label="传统如意卷云回纹纹章">
+                <!-- 外围回纹：左右各自成章，避免与卷云共线挤叠 -->
+                <path pathLength="1" d="M18 158 H58 V126 H30 V102 H76 V142 H48 V174 H104"/>
+                <path pathLength="1" d="M702 158 H662 V126 H690 V102 H644 V142 H672 V174 H616"/>
+                <path pathLength="1" d="M94 174 H132 V148 H108 V122 H154 V158 H136"/>
+                <path pathLength="1" d="M626 174 H588 V148 H612 V122 H566 V158 H584"/>
+
+                <!-- 两侧双层卷云：外卷、内卷分开描画 -->
+                <path pathLength="1" d="M142 154 C154 119 196 106 224 124 C244 137 238 164 216 169 C197 173 184 160 191 147 C197 136 211 137 216 146"/>
+                <path pathLength="1" d="M578 154 C566 119 524 106 496 124 C476 137 482 164 504 169 C523 173 536 160 529 147 C523 136 509 137 504 146"/>
+                <path pathLength="1" d="M164 118 C176 91 207 80 232 92 C249 100 254 118 244 130"/>
+                <path pathLength="1" d="M556 118 C544 91 513 80 488 92 C471 100 466 118 476 130"/>
+
+                <!-- 中央如意结：三瓣云头、垂珠与托座 -->
+                <path pathLength="1" d="M360 64 C344 52 342 30 360 16 C378 30 376 52 360 64"/>
+                <path pathLength="1" d="M354 66 C337 70 317 59 315 43 C312 25 331 15 345 25 C356 33 357 48 348 56"/>
+                <path pathLength="1" d="M366 66 C383 70 403 59 405 43 C408 25 389 15 375 25 C364 33 363 48 372 56"/>
+                <path pathLength="1" d="M344 72 C328 82 328 100 342 109 C353 116 367 116 378 109 C392 100 392 82 376 72"/>
+                <path pathLength="1" d="M360 112 V137 M350 147 Q360 137 370 147 Q360 158 350 147 Z"/>
+
+                <!-- 分段式横梁与斜挑，使中心纹章保持呼吸感 -->
+                <path pathLength="1" d="M258 120 L315 101"/>
+                <path pathLength="1" d="M405 101 L462 120"/>
+                <path pathLength="1" d="M232 176 H316"/>
+                <path pathLength="1" d="M404 176 H488"/>
+                <path pathLength="1" d="M276 176 Q294 158 316 166"/>
+                <path pathLength="1" d="M444 176 Q426 158 404 166"/>
+
+                <!-- 点睛珠饰 -->
+                <circle pathLength="1" cx="360" cy="97" r="6"/>
+                <circle class="dot" cx="142" cy="176" r="3"/>
+                <circle class="dot" cx="578" cy="176" r="3"/>
+                <circle class="dot" cx="258" cy="120" r="2.5"/>
+                <circle class="dot" cx="462" cy="120" r="2.5"/>
+              </svg>
+            </div>
+            <div class="d3-cube-host" style="height:468px">
+              <div class="d3-cube" data-cube style="--cube:336px">
+                <div class="face f-front"><img src="img/seal_tile.png" alt="天王玉玺"></div>
+                <div class="face jade f-right"><span class="seal-txt">天父上帝</span></div>
+                <div class="face ink f-left"><span class="seal-txt">永定乾坤</span></div>
+                <div class="face jade f-back"><span class="seal-txt small">天王真主</span></div>
+                <div class="face ink f-top">
+                  <svg class="face-orn" viewBox="0 0 200 200" aria-hidden="true">
+                    <rect x="22" y="22" width="156" height="156"/>
+                    <rect x="38" y="38" width="124" height="124"/>
+                    <path d="M62 62 H138 V138 H62 Z"/>
+                    <path d="M80 80 H120 V120 H80 Z"/>
+                    <path d="M100 40 V160"/>
+                    <path d="M40 100 H160"/>
+                  </svg>
+                </div>
+                <div class="face ink f-bottom"></div>
+              </div>
+              <div class="d3-cube-shadow"></div>
+            </div>
+            <p class="d3-small" style="text-align:center;margin-top:-26px;color:var(--text-2)">玉玺 · 左右拖动可旋转查看（玺面 / 天父上帝 / 永定乾坤 / 天王真主）</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      接下来是我这组报告的重点：证据。第一件是天王玉玺。
+      天京陷落时缴获的这方玉玺，刻着“天父上帝、永定乾坤”这样的文字，**把洪秀全的家族和上帝、耶稣并列在一起**。请注意这个反差：玺文里的天国是永恒的、统一的；而现实里的天国，正在内讧和割据中裂开。
+      他借宗教起事，后期也只能依靠宗教神话维持个人权力。神权是外衣，王权才是内核——这就是这一页要说的矛盾。
+    </div>
+  </section>
+
+  <!-- ================================================== 07 · 天王府 -->
+  <section class="slide s-palace">
+    <div class="d3-scene" data-scene data-tilt="2.4">
+      <div class="d3-layer bleed" style="--z:-520px;--d:0"><div class="d3-cloud alt"></div></div>
+      <div class="d3-layer bleed" style="--z:-300px;--d:60">
+        <div class="d3-tear">
+          <i class="half-l" style="background-image:url('img/bg_tianwangfu.jpg')"></i>
+          <i class="half-r" style="background-image:url('img/bg_tianwangfu.jpg')"></i>
+          <div class="d3-tear-seam"></div>
+        </div>
+      </div>
+      <div class="d3-layer bleed d3-grain" style="--z:-120px;--d:120"></div>
+      <div class="d3-layer bleed" style="--z:-20px;--d:160">
+        <div style="position:absolute;inset:0;background:linear-gradient(94deg,rgba(6,6,9,.94) 0%,rgba(6,6,9,.74) 30%,rgba(6,6,9,.26) 54%,rgba(6,6,9,.52) 100%)"></div>
+      </div>
+      <div class="d3-layer pad" style="--z:80px;--d:220">
+        <div style="max-width:760px">
+          <div class="d3-rise" style="--d:260">
+            <div class="d3-kicker">证据二 · 天王府“太平一统”</div>
+            <h2 class="d3-h2" style="margin:20px 0 18px">理想平等，<br>帝王奢靡</h2>
+            <p class="d3-body">史料记载，洪秀全征数万民夫修建天王府，定都之后长年深居宫中。起义宣扬人人平等，定都后却大兴土木，复刻封建帝王的那一套奢华。</p>
+          </div>
+          <div class="d3-g2" style="margin-top:34px;gap:20px">
+            <div class="d3-panel d3-rise" style="--d:460">
+              <div class="d3-kicker" style="font-size:13px">前线</div>
+              <p class="d3-body" style="margin-top:10px">将士在围城与饥困中苦战</p>
+            </div>
+            <div class="d3-panel d3-rise" style="--d:560">
+              <div class="d3-kicker" style="font-size:13px">深宫</div>
+              <p class="d3-body" style="margin-top:10px">天王在宝座与仪仗里久不出门</p>
+            </div>
+          </div>
+          <p class="d3-note d3-rise" style="--d:700;margin-top:28px">天王府“太平一统” — 理想平等与帝王奢靡的撕裂。一个把“平等”写在旗子上的政权，最先修好的，是王的宫殿。</p>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      第二件证据，是天王府的大殿，匾上写着“太平一统”。
+      史料记载，洪秀全征发数万民夫修建天王府，定都之后长期深居宫中。而与此同时，前线的将士在围城和饥困里苦战。**一个把“平等”写在旗子上的政权，最先修好的，是王的宫殿。**
+      请注意这页中间的这道裂缝——它不是特效噱头，它就是这个政权内部的真实关系：前面是理想，后面是奢华。高层腐化，动摇的是天国的根基。
+    </div>
+  </section>
+
+  <!-- ================================================== 08 · 太平礼制 -->
+  <section class="slide s-lizhi">
+    <div class="d3-scene" data-scene data-tilt="2.6">
+      <div class="d3-layer bleed" style="--z:-620px;--d:0"><div class="d3-cloud"></div></div>
+      <div class="d3-layer bleed" style="--z:-260px;--d:80">
+        <div class="d3-inkledger" data-ledger="260" style="position:absolute;inset:6% 3% 8% 3%"></div>
+      </div>
+      <div class="d3-layer bleed d3-grain" style="--z:-120px;--d:140"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:220">
+        <div class="d3-rise" style="--d:260">
+          <div class="d3-kicker">证据三 · 太平礼制</div>
+          <h2 class="d3-h2" style="margin:20px 0 16px">制度，变成了猜忌的工具</h2>
+        </div>
+        <div class="d3-g2" style="margin-top:30px;gap:52px;align-items:center">
+          <div class="d3-pop" style="--d:360">
+            <div class="d3-plane contain" style="height:520px;transform:rotateY(12deg) rotateX(-2deg)">
+              <img src="img/lizhi_book.jpg" alt="《太平礼制》书影">
+              <span class="d3-tag">《太平礼制》· 古籍书影</span>
+            </div>
+          </div>
+          <div>
+            <p class="d3-body d3-rise" style="--d:440">《太平礼制》是天国的等级典章。天京事变之后，它被反复修改，王爵持续贬值——爵位越封越多，权力却越来越散。</p>
+            <div class="d3-chain d3-rise" style="--d:560">
+              <div class="node"><div class="t">猜忌兵权</div><div class="d">担心大将坐大</div></div>
+              <div class="node"><div class="t">滥封王爵</div><div class="d">以封王分化权力</div></div>
+              <div class="node"><div class="t">互不统属</div><div class="d">诸王各自为政</div></div>
+              <div class="node hot"><div class="t">体系混乱</div><div class="d">军政彻底失调</div></div>
+            </div>
+            <div class="d3-stat d3-rise" style="--d:700;margin-top:38px">
+              <span class="v counter" data-to="2700" data-dur="2000">0</span>
+              <span class="l">余人<br>后期所封王爵<br><span style="color:var(--text-3);font-size:16px">据黄文英供词</span></span>
+            </div>
+            <p class="d3-note d3-rise" style="--d:840;margin-top:22px">《太平礼制》— 制度沦为制衡将领的工具。“两千七百余人”出自黄文英供词，是史料给出的一种统计口径；但这个大方向是清楚的。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      第三件证据，是《太平礼制》。它是天国的等级典章，天京事变之后被反复修改，王爵持续贬值。据黄文英供词，后期所封王爵多达两千七百余人。
+      为什么要封这么多？因为猜忌。洪秀全想用封王来分化大将的兵权，结果诸王互不统属，军政体系彻底混乱。**他想用制度解决问题，结果制度本身变成了问题。**
+      这里也要说明：两千七百余人出自黄文英供词，是史料给出的一种统计口径。但“制度沦为制衡将领的工具”这个大方向，是清楚的。
+    </div>
+  </section>
+
+  <!-- ================================================== 09 · 李秀成自述 -->
+  <section class="slide s-lixiucheng">
+    <div class="d3-scene" data-scene data-tilt="2.4">
+      <div class="d3-layer bleed" style="--z:-480px;--d:0"><div class="d3-cloud alt"></div></div>
+      <div class="d3-layer bleed" style="--z:-420px;--d:0">
+        <div class="d3-scrim-left" style="position:absolute;inset:0"></div>
+      </div>
+      <div class="d3-layer bleed d3-grain" style="--z:-140px;--d:100"></div>
+      <div class="d3-layer pad" style="--z:70px;--d:200">
+        <div class="d3-rise" style="--d:240">
+          <div class="d3-kicker">证据四 · 李秀成自述</div>
+          <h2 class="d3-h2" style="margin:20px 0 16px">亲历者写下：封王太多</h2>
+        </div>
+        <div class="d3-g2" style="margin-top:26px;gap:56px;align-items:center">
+          <div class="d3-pop" style="--d:340">
+            <div class="d3-scroll">
+              <div class="frame">
+                <img src="img/lixiucheng_ms.jpg" alt="《李秀成自述》手稿">
+                <div class="sheen"></div>
+              </div>
+              <span class="d3-marker" style="left:34px;bottom:-26px">手稿 · 红笔批注</span>
+              <span class="d3-marker" style="right:34px;top:-24px">“封王太多”论列其中</span>
+            </div>
+          </div>
+          <div>
+            <p class="d3-quote d3-rise" style="--d:460">封王太多。<span class="src">李秀成被俘后所写自述，把“封王太多”列为天朝重大失误之一。</span></p>
+            <p class="d3-body d3-rise" style="--d:580;margin-top:28px">作为核心将领，他亲眼见证滥封王爵造成将领各自为战。洪秀全想用封王稳固统治，却因猜忌与私心，加剧分裂，加速了政权的崩溃。</p>
+            <p class="d3-note d3-rise" style="--d:700;margin-top:26px">《李秀成自述》— 亲历者眼中滥封王爵的致命失误。史料边界：自述写于被俘之后，可能含自我辩解成分；但在“后期权力分散”这一点上，它与其他材料大体一致。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      第四件证据，是《李秀成自述》。李秀成被俘之后写下自述，把“封王太多”列为天朝的重大失误之一。
+      他作为核心将领，亲眼看到滥封王爵让将领们各自为战。**洪秀全想用封王稳住统治，结果因为猜忌和私心，加速了分裂。**
+      这份材料要用得有分寸：它写于被俘之后，难免有自我辩解的成分；但在“后期权力分散”这一点上，它和其他材料大体一致。这也是我们讲史料时该有的态度——不迷信任何一份单一材料。
+    </div>
+  </section>
+
+  <!-- ================================================== 10 · 天父诗 -->
+  <section class="slide s-tianfu">
+    <div class="d3-scene" data-scene data-tilt="3">
+      <div class="d3-layer bleed" style="--z:-620px;--d:0"><div class="d3-cloud"></div></div>
+      <div class="d3-layer bleed" style="--z:-420px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed d3-dust" style="--z:-160px;--d:120" data-dust="34"></div>
+      <div class="d3-layer bleed d3-grain" style="--z:-180px;--d:100"></div>
+      <div class="d3-layer pad" style="--z:60px;--d:180">
+        <div class="d3-rise" style="--d:220">
+          <div class="d3-kicker">证据五 · 天父诗</div>
+          <h2 class="d3-h2" style="margin:20px 0 30px">深宫里的训诫</h2>
+        </div>
+        <div class="d3-explode" data-brush data-brush-value="只有臣错　无主错">
+          <span data-brush-text>只有臣错　无主错</span>
+        </div>
+        <div class="d3-g2" style="margin-top:26px;gap:56px;align-items:center">
+          <p class="d3-body d3-rise" style="--d:520">《天父诗》是洪秀全在深宫写下的训诫条文，其中就有“只有臣错无主错”这样的话。他起兵时反对的是压迫；掌权后建立的，却是一套“臣下永远错、君主永远对”的秩序。</p>
+          <div class="d3-pop" style="--d:620">
+            <div class="d3-plane contain" style="height:300px;transform:rotateY(-14deg) rotateX(4deg)">
+              <img src="img/tianfushi_book.jpg" alt="《天父诗》刻本">
+              <span class="d3-tag">《天父诗》· 刻本</span>
+            </div>
+          </div>
+        </div>
+        <p class="d3-note d3-rise" style="--d:780;margin-top:30px">《天父诗》— 独断封闭的君主思想。他反对的是别人做皇帝，不是皇帝这个位置。</p>
+      </div>
+    </div>
+    <div class="notes">
+      备用的一页是《天父诗》。这是洪秀全在深宫里写下的训诫条文，其中有“只有臣错无主错”这样的话。
+      请体会这句话的重量：他起兵的时候，反对的是压迫；掌权以后，他建立的是一套**“臣下永远错、君主永远对”**的秩序。
+      一句话总结这一页：他反对的是别人做皇帝，不是皇帝这个位置。
+    </div>
+  </section>
+
+  <!-- ================================================== 11 · 张力 -->
+  <section class="slide s-tension">
+    <div class="d3-scene" data-scene data-tilt="2.6">
+      <div class="d3-layer bleed" style="--z:-600px;--d:0"><div class="d3-cloud"></div></div>
+      <div class="d3-layer bleed" style="--z:-400px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer pad" style="--z:60px;--d:160">
+        <div class="d3-rise" style="--d:200">
+          <div class="d3-kicker">对照 · 反抗者与帝王</div>
+          <h2 class="d3-h2" style="margin:20px 0 16px">他喊出的，他做成的</h2>
+          <p class="d3-lede">三组对照，正面与背面——卡片会自动翻面，也可以把鼠标放上去手动翻。</p>
+        </div>
+        <div class="d3-g3" style="margin-top:44px">
+          <div class="d3-flip d3-rise" style="--i:0;--d:420">
+            <div class="d3-flip-in">
+              <div class="fc"><span class="lab">他喊出的</span><span class="txt">天下多男子，尽是兄弟之辈</span></div>
+              <div class="fc back"><span class="lab">他做成的</span><span class="txt">天王之下，等级森严：后期封王两千余人</span></div>
+            </div>
+          </div>
+          <div class="d3-flip d3-rise" style="--i:1;--d:560">
+            <div class="d3-flip-in">
+              <div class="fc"><span class="lab">他喊出的</span><span class="txt">有田同耕，有饭同食，有衣同穿</span></div>
+              <div class="fc back"><span class="lab">他做成的</span><span class="txt">《天朝田亩制度》几乎没有真正落地</span></div>
+            </div>
+          </div>
+          <div class="d3-flip d3-rise" style="--i:2;--d:700">
+            <div class="d3-flip-in">
+              <div class="fc"><span class="lab">他喊出的</span><span class="txt">天下多女子，尽是姊妹之群</span></div>
+              <div class="fc back"><span class="lab">他做成的</span><span class="txt">《天父诗》里，是管束后妃的“十该打”</span></div>
+            </div>
+          </div>
+        </div>
+        <p class="d3-quote d3-rise" style="--d:1000;margin-top:52px;max-width:1200px">他把平等写在旗子上，把等级写进制度里。</p>
+      </div>
+    </div>
+    <div class="notes">
+      把前面几页放在一起，就出现了这份报告真正想说的问题。
+      **他喊出的，是“天下多男子，尽是兄弟之辈”；他做成的，是天王之下等级森严。**他喊出的，是“有田同耕，有饭同食”；他做成的，是《天朝田亩制度》几乎没能落地。他喊出的，是“天下多女子，尽是姊妹之群”；他做成的，是《天父诗》里管束后妃的条规。
+      一句话：他把平等写在旗子上，把等级写进制度里。这不是后人强加给他的评价，而是他自己的文本摆在一起之后的结论。
+    </div>
+  </section>
+
+  <!-- ================================================== 12 · 结论 -->
+  <section class="slide s-end">
+    <div class="d3-scene" data-scene data-tilt="3">
+      <div class="d3-layer bleed" style="--z:-660px;--d:0">
+        <div class="d3-fxstage" data-fx="galaxy-swirl" style="opacity:.5"></div>
+      </div>
+      <div class="d3-layer bleed" style="--z:-640px;--d:0"><div class="d3-cloud alt"></div></div>
+      <div class="d3-layer bleed" style="--z:-460px;--d:60"><div class="d3-light"></div></div>
+      <div class="d3-layer bleed" style="--z:-360px;--d:60">
+        <img class="d3-bg" src="img/closing.jpg" alt="清军收复金陵长卷" style="opacity:.5">
+        <div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 46% 46%,rgba(6,6,9,.42),rgba(6,6,9,.94) 74%)"></div>
+      </div>
+      <div class="d3-layer pad" style="--z:70px;--d:200">
+        <div class="d3-rise" style="--d:240">
+          <div class="d3-kicker">结论 · 封建帝王</div>
+          <h2 class="d3-h2" style="margin:20px 0 16px">他推翻了旧王朝，<br>坐上了同一把椅子</h2>
+        </div>
+        <div class="d3-g2" style="margin-top:34px;gap:52px;align-items:start">
+          <ol class="d3-end-list d3-rise" style="--d:400">
+            <li><span class="k">01</span><div><b>他确实动摇了旧秩序。</b>十四年，席卷大半个中国，让反清从地方叛乱变成一个全国性问题。</div></li>
+            <li><span class="k">02</span><div><b>他没能建立新秩序。</b>政权内部很快长出了自己的特权；理想越完整，越容易和现实脱节。</div></li>
+            <li><span class="k">03</span><div><b>所以他的意义不在于建成了什么，而在于暴露了什么。</b>旧王朝的脆弱、农民起义的天花板，以及“破”与“立”之间那段最难的距离。</div></li>
+          </ol>
+          <div>
+            <div class="d3-pop" style="--d:520">
+              <div class="d3-plane" style="height:250px;transform:rotateY(-9deg)">
+                <img src="img/closing.jpg" alt="金陵长卷">
+                <span class="d3-tag">1864 · 金陵</span>
+              </div>
+            </div>
+            <p class="d3-quote d3-rise" style="--d:660;margin-top:30px;font-size:32px">知有民族而不知有民权，知有君主而不知有民主。<span class="src">孙中山评洪秀全</span></p>
+            <p class="d3-note d3-rise" style="--d:800;margin-top:24px">材料边界：评价洪秀全，不能只信太平天国的宣传，也不能只信曾国藩一方的说法。把他自己的文本、同时代人的记录和后人的研究放在一起看，才是讲历史应有的分寸。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notes">
+      所以我的判断是：洪秀全是一个有强烈宗教感、有政治想象、也有动员天才的人，但他**没有完成从“破”到“立”的转变**。
+      他确实动摇了旧秩序——十四年，让反清从地方叛乱变成一个全国性问题；他没能建起新秩序——政权内部很快长出了自己的特权。孙中山后来有一句很清醒的评价：“知有民族而不知有民权，知有君主而不知有民主。”
+      最后说一句关于材料的话：评价他，不能只信太平天国的宣传，也不能只信曾国藩一方的说法。谢谢大家。
+    </div>
+  </section>
+</div>
+
+<div class="progress-bar"><span></span></div>
+<script src="assets/runtime.js"></script>
+<script src="assets/animations/fx-runtime.js"></script>
+<script src="deck3d.js"></script>
+</body>
+</html>
