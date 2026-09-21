@@ -229,6 +229,12 @@
     if (!overview) {
       overview = document.createElement('div');
       overview.className = 'overview';
+      document.body.appendChild(overview);
+    }
+    let overviewBuilt = overview.children.length > 0;
+    function buildOverview() {
+      if (overviewBuilt) return;
+      overviewBuilt = true;
       slides.forEach((s, i) => {
         const t = document.createElement('div');
         t.className = 'thumb';
@@ -304,7 +310,6 @@
         t.addEventListener('click', () => { go(i); toggleOverview(false); });
         overview.appendChild(t);
       });
-      document.body.appendChild(overview);
     }
 
     /* ===== navigation ===== */
@@ -377,6 +382,7 @@
     function toggleNotes(force){ notes.classList.toggle('open', force!==undefined?force:!notes.classList.contains('open')); }
     function toggleOverview(force){
       const isOpen = force!==undefined ? force : !overview.classList.contains('open');
+      if (isOpen) buildOverview();
       overview.classList.toggle('open', isOpen);
       if (isOpen) {
         requestAnimationFrame(() => {

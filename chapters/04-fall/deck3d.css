@@ -590,7 +590,9 @@ h3.d3-h3{font-family:var(--font-display);font-size:36px;line-height:1.24;margin:
   .d3-bg,.d3-floor,.d3-mile,.d3-scroll .frame img,.d3-scroll .sheen{animation:none!important}
   .d3-layer,.d3-rise,.d3-pop,.d3-seal,.d3-crack,.d3-flash,.d3-tear i,.d3-tear-seam,
   .d3-shake,.d3-flip-in{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}
-  .slide{transition:none!important;transform:none!important;opacity:1!important}
+  .slide{transition:none!important;transform:none!important}
+  .slide:not(.is-active){opacity:0!important;pointer-events:none!important}
+  .slide.is-active{opacity:1!important;pointer-events:auto!important}
 }
 
 /* ==========================================================================
